@@ -39,6 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'news_app',
     'accounts',
+    'django_forms_bootstrap',
+    # 'oauth_tokens',
+    # 'm2m_history',
+    # 'taggit',
+    # 'twitter_api',
+    # 'youtube_api',
+    # 'instagram_api',
+
 ]
 
 MIDDLEWARE = [
@@ -128,3 +136,9 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.EmailAuth',
 )
+
+
+# Media
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

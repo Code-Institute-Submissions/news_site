@@ -15,12 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.views.static import serve
 from accounts import views as accounts_views
 from news_app import views as news_views
-
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
-	url(r'^admin/', admin.site.urls),
-	url(r'^$', news_views.get_index, name='index'),
-	url(r'^register/$', accounts_views.register, name='register'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', news_views.get_index, name='index'),
+    url(r'^register/$', accounts_views.register, name='register'),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    url(r'^article/new/$', news_views.new_article, name='new_article'),
+    url(r'^articles/(?P<id>\d+)/$', news_views.article_detail),
+    url(r'^login/$', accounts_views.login, name='login'),
+    url(r'^profile/$', accounts_views.profile, name='profile'),
+    url(r'^logout/$', accounts_views.logout, name='logout'),
+
 ]
