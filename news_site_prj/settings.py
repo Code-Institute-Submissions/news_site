@@ -40,15 +40,18 @@ INSTALLED_APPS = [
     'news_app',
     'accounts',
     'django_forms_bootstrap',
-    # 'oauth_tokens',
-    # 'm2m_history',
-    # 'taggit',
-    # 'twitter_api',
+    'debug_toolbar',
+    'tinymce',
+    'emoticons',
+    'oauth_tokens',
+    'm2m_history',
+    'taggit',
+    'twitter_api',
     # 'youtube_api',
     # 'instagram_api',
 
 ]
-
+INTERNAL_IPS = ('127.0.0.1',)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'news_site_prj.urls'
@@ -129,6 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
+
+STATICFILES_DIRS = (
+os.path.join(BASE_DIR, "static"),  # static directory at the project level
+)
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -142,3 +151,6 @@ AUTHENTICATION_BACKENDS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')

@@ -1,0 +1,12 @@
+<li><a href="#" data-toggle="collapse" data-target="#myCollapsingList">Sport</a></li>
+           <li><a href="#" data-toggle="collapse" data-target="#myCollapsingList">Politics</a></li>
+           <li><a href="#" data-toggle="collapse" data-target="#myCollapsingList">News</a></li>
+           <li><a href="#" data-toggle="collapse" data-target="#myCollapsingList">Funny Stuff</a></li>
+           <li><a href="#" data-toggle="collapse" data-target="#myCollapsingList">Tech / Science / Music</a></li>
+           {%  if user.is_authenticated %}
+               <li><a href="{% url 'new_article' %}" data-toggle="collapse" data-target="#myCollapsingList">New Article</a></li>
+               <li><a href="{% url 'logout' %}" data-toggle="collapse" data-target="#myCollapsingList">Log Out</a></li>
+           {%  else %}
+               <li><a href="{% url 'register' %}" data-toggle="collapse" data-target="#myCollapsingList">Register</a></li>
+               <li><a href="{% url 'login' %}" data-toggle="collapse" data-target="#myCollapsingList">Log In</a></li>
+           {%  endif %}

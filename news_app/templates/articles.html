@@ -6,8 +6,9 @@
             <div>
                 {{ article.published_date }}
             </div>
-            <h1><a href="">{{ article.title }}</a></h1>
+            <h1><a href="/articles/{{ article.id }}">{{ article.title }}</a></h1>
             <p>{{ article.content|linebreaks }}</p>
+            <p><button class="btn btn-default" onclick="location.href='/articles/{{ article.id }}'">Read More</button></p
         </div>
     {% endfor %}
 {% endblock %}

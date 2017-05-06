@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 def get_index(request):
     return render(request, 'index.html')
 
-def post_list(request):
+def article_list(request):
     """
     Create a view that will return a
     list of Posts that were published prior to'now'

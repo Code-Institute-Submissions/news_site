@@ -1,48 +1,63 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Our Simple Site</title>
+    <title>Django News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/font-awesome-4.7.0/css/font-awesome.css" %}">
+    {% block head_js %}{% endblock head_js %}
 </head>
 <body>
-<div class="container">
-   <div class="masthead">
-       <ul class="nav nav-pills pull-right">
-           <li><a href="#">Home</a></li>
-           <li><a href="#">About</a></li>
-           <li><a href="#">Contact</a></li>
-           <li><a href="{% url 'register' %}">Register</a></li>
-           <li><a href="{% url 'login' %}">Log In</a></li>
-           <li><a href="{% url 'logout' %}">Log Out</a></li>
-       </ul>
-       <h1><span class="fui-settings-16 muted">Our Simple Site</span></h1>
-   </div>
-   <hr>
-    {% if messages %}
-        <div class="alert alert-success">
-            <div class="messages">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
+<nav class="navbar navbar-inverse">
+
+	<div class="navbar-header">
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+			<span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	    </button>
+        <a class="navbar-brand" href="/">Django News</a>
+	</div>
+    <div class="collapse navbar-collapse" id="myCollapsingList">
+		<ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sport</a></li>
+            <li><a href="{% url 'new_article' %}" data-target="#myCollapsingList">Politics</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Funny Stuff</a></li>
+            <li><a href="#">Tech / Science / Music</a></li>
+            {%  if user.is_authenticated %}
+               <li><a href="{% url 'new_article' %}">New Article</a></li>
+               <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {%  else %}
+               <li><a href="{% url 'register' %}">Register</a></li>
+               <li><a href="{% url 'login' %}">Log In</a></li>
+            {%  endif %}
+		</ul>
+	</div>
+</nav>
+<div>
+    <hr>
+    <div class="container">
+        <div>
+            <div>
+                {% block content %}
+                {% endblock %}
             </div>
         </div>
-    {% endif %}
+    </div>
 
-
-   <div class="container">
-       {% block content %}
-       {% endblock %}
-   </div>
    <hr>
    <div class="footer">
        <p>Made By Bootcampers and Django </p>
    </div>
 </div>
+
+
 </body>
 
 <!-- script references -->
