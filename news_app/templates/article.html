@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
+{% load article_extras %}
 {% block content %}
-    <div class="container">
         <div class="row">
             <div id="main-article" class="col-xs-12 col-sm-8 col-lg-8">
                 <h1>{{ article.title }}</h1>
@@ -15,8 +15,13 @@
                 {% endautoescape %}
                 <div class="publish-date">{{ article.published_date }}</div>
             </div>
-            <div id="top-stories" class="col-xs-12 col-sm-4 col-lg-4">Top Stories</div>
-            <div id="related-content" class="col-xs-12 col-sm-4 col-lg-4">Related Content</div>
+            <div id="top-stories" class="col-xs-12 col-sm-4 col-lg-4 top-stories">
+                <h2>Top Stories</h2>
+                {%  top_stories story %}
+            </div>
+            <div id="related-content" class="col-xs-12 col-sm-4 col-lg-4">
+                <h2>Related {{ article.category }} stories</h2>
+                {%  related_content related %}
+            </div>
         </div>
-    </div>
 {% endblock %}

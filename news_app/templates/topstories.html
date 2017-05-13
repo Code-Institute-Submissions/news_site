@@ -1,0 +1,13 @@
+<ul>
+    {% for story in stories|slice:"2" %}
+        <li class="top-story">
+            <div>
+                <img class="img-responsive" src="/media/{{ story.image}}">
+            </div>
+            <div>
+                <h3>{{ story.title }}</h3>
+                <p>  {{ story.published_date }}</p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

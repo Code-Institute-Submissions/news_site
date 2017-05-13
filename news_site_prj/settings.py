@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'tinymce',
     'emoticons',
-    'oauth_tokens',
-    'm2m_history',
-    'taggit',
-    'twitter_api',
+    #'oauth_tokens',
+    #'m2m_history',
+    #'taggit',
+    #'twitter_api',
     # 'youtube_api',
     # 'instagram_api',
 
@@ -154,3 +154,14 @@ MEDIA_URL = '/media/'
 
 # tinymce settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+"""
+# oauth token settings
+
+OAUTH_TOKENS_HISTORY = True                                        # to keep in DB expired access tokens
+OAUTH_TOKENS_TWITTER_CLIENT_ID = '860803449222508545-SXiPVcthFsBgRSuwTXRga7SHbgD97WU'                                # application ID
+OAUTH_TOKENS_TWITTER_CLIENT_SECRET = '4Wecc2bRhAr5H4nVHa4xY3KRsYz4CkXZzRxZly7ycwFtK'                            # application secret key
+OAUTH_TOKENS_TWITTER_USERNAME = 'django.news@outlook.com'                                 # user login
+OAUTH_TOKENS_TWITTER_PASSWORD = 'Football2012'                                 # user password
+
+"""

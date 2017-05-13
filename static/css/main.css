@@ -1,7 +1,64 @@
 .navbar {
     border-radius: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    background-color: #004a9f;
+    margin-bottom: 0px;
+}
+
+.navbar-collapse {
+    border-radius: 0px;
+    background-color: #004a9f;
+}
+
+.navbar-brand {
+    color: #FFF
 }
 
 .row {
     display: inline;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px;
+
+}
+
+.top-story {
+    background-color: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.top-story h3 {
+    color: rgba(0,0,0,0.8);
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.top-stories {
+}
+
+.top-stories h2 {
+    color: rgba(0,0,0, 0.8);
+    padding: 0px 5px;
+}
+
+.related-content {
+    background-color: rgba(0,0,0, 0.8);
+    color: rgba(255,255,255, 0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.related-content h3 {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+
+

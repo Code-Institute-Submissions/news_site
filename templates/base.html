@@ -13,8 +13,7 @@
     {% block head_js %}{% endblock head_js %}
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-
+<nav class="navbar">
 	<div class="navbar-header">
     	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
 			<span class="icon-bar"></span>
@@ -40,21 +39,13 @@
 		</ul>
 	</div>
 </nav>
-<div>
-    <hr>
-    <div class="container">
-        <div>
-            <div>
-                {% block content %}
-                {% endblock %}
-            </div>
-        </div>
-    </div>
-
-   <hr>
-   <div class="footer">
-       <p>Made By Bootcampers and Django </p>
-   </div>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+<hr>
+<div class="footer">
+   <p>Made By Bootcampers and Django </p>
 </div>
 
 
