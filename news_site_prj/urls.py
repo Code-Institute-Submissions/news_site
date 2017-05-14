@@ -25,7 +25,7 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', news_views.article_list, name='article_list'),
+    url(r'^$', news_views.home, name='home'),
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^article/new/$', news_views.new_article, name='new_article'),
@@ -33,6 +33,8 @@ urlpatterns = [
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^articles/(?P<id>\d+)/edit$', news_views.edit_article),
+    url(r'^articles/$', news_views.article_list, name='article_list')
 
 
 ]

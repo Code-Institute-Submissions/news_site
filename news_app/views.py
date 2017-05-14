@@ -45,4 +45,24 @@ def new_article(request):
         form = ArticlePostForm()
     return render(request, 'articlepostform.html', {'form': form})
 
+@login_required(login_url='/login/')
+def edit_article(request, id):
+    article = get_object_or_404(Article, pk=id)
+    if request.method == "POST":
+        form = ArticlePostForm(request.POST, request.FILES, instance=article)
+        if form.is_valid():
+            article.author = request.user
+            article.published_date = timezone.now()
+            article.save()
+            return redirect(article_detail, article.pk)
+
+    else:
+        form = ArticlePostForm(instance=article)
+    return render(request, 'articlepostform.html', {'form': form})
+
+def home(request):
+    home = Article.objects.filter(published_date__lte=timezone.now()
+        ).order_by('-published_date')
+    return render(request, "home.html", {'home': home})
+
 

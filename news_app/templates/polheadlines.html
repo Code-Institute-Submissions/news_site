@@ -1,0 +1,18 @@
+<ul class="best-of-rest">
+    <h2>Politics</h2>
+    {% for story in polheadlines|slice:"4" %}
+        <li>
+            <div class="best-of-rest-item col-md-3">
+                <a href="/articles/{{ story.id }}">
+                    <div>
+                        <img class="img-responsive" src="/media/{{ story.image}}">
+                    </div>
+                    <div class="panel">
+                        <h4 class="best-of-rest-titles">{{ story.title }}</h4>
+                        <p class="publish-date">{{ story.published_date }}</p>
+                    </div>
+                </a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

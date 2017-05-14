@@ -1,3 +1,4 @@
+/* Base */
 .navbar {
     border-radius: 0px;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
@@ -24,6 +25,54 @@ ul {
     padding: 5px;
 
 }
+
+hr {
+    margin: 0px
+}
+
+/* Homepage */
+
+.hero {
+    display: inline;
+}
+
+.news-section {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.main-news {
+    display: block;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    flex: 1;
+}
+
+.headlines-img {
+    padding-left: 0px;
+}
+
+.headlines-section-titles {
+    font-size: 14px;
+}
+
+.more-stories {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.more-stories-item {
+    flex: 1;
+}
+
+
+
+/* Article Page */
 
 .top-story {
     background-color: #FFF;
@@ -59,6 +108,9 @@ body {
     font-size: 1.5em;
     padding: 5px;
 }
-
+.publish-date {
+    font-size: 12px;
+    margin: 2px;
+}
 
 

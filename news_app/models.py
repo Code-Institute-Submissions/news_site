@@ -18,7 +18,13 @@ class Article(models.Model):
     twitterStatus = models.CharField(max_length=100)
     youtubeVideo = models.CharField(max_length=100)
     instaPic = models.CharField(max_length=200)
-    category = models.CharField(max_length=256, choices=[('sport', 'Sport'), ('politics', 'Politics'), ('news', 'News')], default='news')
+    category = models.CharField(max_length=256, choices=[
+        ('sport', 'Sport'),
+        ('politics', 'Politics'),
+        ('news', 'News'),
+        ('fun', 'Fun'),
+        ('music', 'Music'),
+    ], default='news')
 
 
 

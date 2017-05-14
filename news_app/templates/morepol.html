@@ -1,0 +1,12 @@
+<div class="more-stories">
+    <h4>More Politics</h4>
+    {% for story in morepol|slice:"5" %}
+        <div class="more-stories-item">
+            <a href="/articles/{{ story.id }}">
+                <h4 class="headlines-section-titles">{{ story.title }}</h4>
+                <p class="publish-date">{{ story.published_date }}</p>
+            </a>
+        <hr>
+        </div>
+    {% endfor %}
+</div>

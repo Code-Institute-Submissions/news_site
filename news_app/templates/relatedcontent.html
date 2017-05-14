@@ -1,13 +1,15 @@
 <ul>
     {% for related in relatedcontents|slice:"2" %}
         <li class="related-content">
-            <div>
-                <img class="img-responsive" src="/media/{{ related.image }}">
-            </div>
-            <div>
-                <h3>{{ related.title }}</h3>
-                <p> {{ related.published_date }}</p>
-            </div>
+            <<a href="/articles/{{ story.id }}">
+                <div>
+                    <img class="img-responsive" src="/media/{{ related.image }}">
+                </div>
+                <div>
+                    <h3>{{ related.title }}</h3>
+                    <p> {{ related.published_date }}</p>
+                </div>
+            </a>
         </li>
     {% endfor %}
 </ul>

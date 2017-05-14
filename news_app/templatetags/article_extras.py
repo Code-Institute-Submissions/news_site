@@ -10,11 +10,6 @@ def top_stories(story):
         ).order_by('-published_date')
     return {'stories': stories}
 
-@register.filter
-def get_page_category(pk, category):
-    category = Article.objects.get(category)[0]
-    return category
-
 
 @register.inclusion_tag('relatedcontent.html')
 def related_content(related):

@@ -1,0 +1,15 @@
+<ul class="news-section">
+    {% for story in sportheadlines|slice:"3" %}
+        <li class="main-news">
+            <a href="/articles/{{ story.id }}">
+                <div class="col-sm-4 headlines-img">
+                    <img class="img-responsive" src="/media/{{ story.image}}">
+                </div>
+                <div class="col-sm-8">
+                    <h4 class="headlines-section-titles">{{ story.title }}</h4>
+                    <p class="publish-date">{{ story.published_date }}</p>
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

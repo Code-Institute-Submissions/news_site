@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load home_extras %}
+{% block content %}
+    <div id="hero" class="row">
+        <div class="col-lg-8 col-sm-8">
+            <img class="hero img-responsive" src="/media/images/rb.jpg">
+        </div>
+        <div class="hero col-lg-4"><h1>Primary news headline for Django News</h1></div>
+    </div>
+    <div class="row">
+        <div id="news" class="col-md-6 col-lg-6">
+            <h2>News</h2>
+            {%  main_stories story %}
+        </div>
+        <div id="sport" class="col-md-6 col-lg-6">
+            <h2>Sport</h2>
+            {%  sport_headlines story %}
+        </div>
+    </div>
+
+    <div>
+        <div class="row">
+            {% politics_headlines story %}
+        </div>
+        <div class="row">
+            <h2>Funny</h2>
+            {% funny_headlines story %}
+        </div>
+    </div>
+    <div id="categories">
+        <div id="more-news" class="col-md-6">
+            {% more_news %}
+        </div>
+        <div id="more-sport" class="col-md-6">
+            {% more_sport %}
+        </div>
+        <div id="more-politics" class="col-md-6">
+            {% more_pol %}
+        </div>
+        <div id="more-fun" class="col-md-6">
+            {% more_fun %}
+        </div>
+    </div>
+
+{% endblock %}
