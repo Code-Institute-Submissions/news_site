@@ -25,9 +25,16 @@ class AccountUserManager(UserManager):
 
 
 class User(AbstractUser):
-    # now that we've abstracted this class we can add any
-    # number of custom attribute to our user class
-
-    # in later units we'll be adding things like payment details!
 
     objects = AccountUserManager()
+
+    def is_subscribed(self, magazine):
+        try:
+            purchase = self.purchases.get(magazine__pk=magazine.pk)
+        except Exception:
+            return False
+
+        if purchase.subscription_end > timezone.now():
+            return False
+
+        return True

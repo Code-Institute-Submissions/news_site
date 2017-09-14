@@ -34,7 +34,11 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
     url(r'^articles/(?P<id>\d+)/edit$', news_views.edit_article),
-    url(r'^articles/$', news_views.article_list, name='article_list')
+    url(r'^articles/$', news_views.article_list, name='article_list'),
+    url(r'^sport/$', news_views.sport_landing, name='sport_landing'),
+    #url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
+    #url(r'^paypal-return', paypal_views.paypal_return),
+    #url(r'^paypal-cancel', paypal_views.paypal_cancel),
 
 
 ]

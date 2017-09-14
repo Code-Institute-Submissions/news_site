@@ -1,6 +1,7 @@
 <div class="more-stories">
     <h4>More Politics</h4>
-    {% for story in morepol|slice:"5" %}
+    <hr>
+    {% for story in morepol|slice:"3" %}
         <div class="more-stories-item">
             <a href="/articles/{{ story.id }}">
                 <h4 class="headlines-section-titles">{{ story.title }}</h4>

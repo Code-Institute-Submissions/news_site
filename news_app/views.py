@@ -66,3 +66,7 @@ def home(request):
     return render(request, "home.html", {'home': home})
 
 
+def sport_landing(request):
+    sport = Article.objects.filter(published_date__lte=timezone.now()
+        ).order_by('-published_date')
+    return render(request, "categorylanding.html", {'sport': sport})

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="{% static "css/main.css" %}">
     <link rel="stylesheet" href="{% static "css/font-awesome-4.7.0/css/font-awesome.css" %}">
-    {% block head_js %}{% endblock head_js %}
+    {% block head_js %}
+    {% endblock %}
 </head>
 <body>
 <nav class="navbar">
@@ -24,11 +25,11 @@
 	</div>
     <div class="collapse navbar-collapse" id="myCollapsingList">
 		<ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Sport</a></li>
-            <li><a href="{% url 'new_article' %}" data-target="#myCollapsingList">Politics</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Funny Stuff</a></li>
-            <li><a href="#">Tech / Science / Music</a></li>
+            <li><a href="{% url 'home' %}">News</a></li>
+            <li><a href="{% url 'sport_landing' %}">Sport</a></li>
+            <li><a href="{% url 'sport_landing' %}">Politics</a></li>
+            <li><a href="{% url 'sport_landing' %}">Funny Stuff</a></li>
+            <li><a href="{% url 'sport_landing' %}">Tech / Science / Music</a></li>
             {%  if user.is_authenticated %}
                <li><a href="{% url 'new_article' %}">New Article</a></li>
                <li><a href="{% url 'logout' %}">Log Out</a></li>
@@ -44,9 +45,25 @@
     {% endblock %}
 </div>
 <hr>
-<div class="footer">
+<footer class="footer row">
+    <div>Django News Logo</div>
+    <div class="col-md-6 col-lg-6"></div>
+        <ul>
+            <li>Contact us</li>
+            <li>Write for us</li>
+            <li>Send us content</li>
+            <li>Advertise</li>
+        </ul>
+    <div class="col-md-6 col-lg-6">
+        <ul>
+            <li>Jobs</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+    </div>
    <p>Made By Bootcampers and Django </p>
-</div>
+</footer>
 
 
 </body>

@@ -1,7 +1,7 @@
 <ul>
     {% for related in relatedcontents|slice:"2" %}
         <li class="related-content">
-            <<a href="/articles/{{ story.id }}">
+            <a href="/articles/{{ related.id }}">
                 <div>
                     <img class="img-responsive" src="/media/{{ related.image }}">
                 </div>

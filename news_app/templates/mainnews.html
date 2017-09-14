@@ -1,6 +1,6 @@
 <ul class="news-section">
     {% for story in stories|slice:"3" %}
-        <li class="main-news row">
+        <li class="main-news">
             <a href="/articles/{{ story.id }}">
                 <div class="col-sm-4 headlines-img">
                     <img class="img-responsive" src="/media/{{ story.image}}">

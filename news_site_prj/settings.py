@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# PayPal Settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = '<your paypal merchant email goes here>'
 
 # Application definition
 
@@ -43,6 +47,9 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'tinymce',
     'emoticons',
+    'paypal.standard.ipn',
+    'jquery',
+    'paypal_store'
     #'oauth_tokens',
     #'m2m_history',
     #'taggit',
@@ -64,6 +71,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'news_site_prj.urls'
+
+
 
 TEMPLATES = [
     {
