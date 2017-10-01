@@ -1,13 +1,15 @@
+{% load humanize %}
 <div class="more-stories">
-    <h4>More News</h4>
-    <hr>
-    {% for story in morenews|slice:"3" %}
-        <div class="more-stories-item">
-            <a href="/articles/{{ story.id }}">
-                <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                <p class="publish-date">{{ story.published_date }}</p>
-            </a>
-        <hr>
-        </div>
+    <h4>More {{ section_title }}</h4>
+    {% for story in morenews %}
+        {% if forloop.counter >= 4 and forloop.counter <= 7 %}
+            <hr>
+            <div class="more-stories-item">
+                <a href="/articles/{{ story.id }}">
+                    <h5 class="headlines-section-titles">{{ story.title }}</h4>
+                    <p class="publish-date">{{ story.published_date|naturaltime }}</p>
+                </a>
+            </div>
+        {%  endif %}
     {% endfor %}
 </div>

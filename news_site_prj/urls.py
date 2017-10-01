@@ -13,15 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.contrib import admin
-from django.views.static import serve
-from accounts import views as accounts_views
-from news_app import views as news_views
-from .settings import MEDIA_ROOT
 from django.conf import settings
 from django.conf.urls import include, url
-
+from django.contrib import admin
+from django.views.static import serve
+from paypal_store import views as paypal_views
+from accounts import views as accounts_views
+from news_app import views as news_views
+from settings.base import MEDIA_ROOT
+from paypal.standard.ipn import urls as paypal_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -36,9 +36,11 @@ urlpatterns = [
     url(r'^articles/(?P<id>\d+)/edit$', news_views.edit_article),
     url(r'^articles/$', news_views.article_list, name='article_list'),
     url(r'^sport/$', news_views.sport_landing, name='sport_landing'),
-    #url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
-    #url(r'^paypal-return', paypal_views.paypal_return),
-    #url(r'^paypal-cancel', paypal_views.paypal_cancel),
+    url(r'^politics/$', news_views.politics_landing, name='politics_landing'),
+    url(r'^tuux4YjAo2U58peXPSC7/', include(paypal_urls)),
+    url(r'^paypal-return', paypal_views.paypal_return),
+    url(r'^paypal-cancel', paypal_views.paypal_cancel),
+    url(r'^products/$', paypal_views.all_products, name='all_products'),
 
 
 ]

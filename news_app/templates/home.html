@@ -2,42 +2,52 @@
 {% load home_extras %}
 {% block content %}
     <div id="hero" class="row">
-        <div class="col-lg-8 col-sm-8">
-            <img class="hero img-responsive" src="/media/images/rb.jpg">
-        </div>
-        <div class="hero col-lg-4"><h1>Primary news headline for Django News</h1></div>
+        {%  hero story %}
     </div>
     <div class="row">
-        <div id="news" class="col-md-6 col-lg-6">
+        <div id="news" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <h2>News</h2>
             {%  main_stories story %}
         </div>
-        <div id="sport" class="col-md-6 col-lg-6">
+        <div id="sport" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <h2>Sport</h2>
             {%  sport_headlines story %}
         </div>
     </div>
-
-    <div>
-        <div class="row">
-            {% politics_headlines story %}
-        </div>
-        <div class="row">
-            <h2>Funny</h2>
-            {% funny_headlines story %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Politics</h2>
         </div>
     </div>
-    <div id="categories">
-        <div id="more-news" class="col-md-6">
+    <div class="row">
+        {% politics_headlines story %}
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Politics</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% funny_headlines story %}
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>More News</h2>
+        </div>
+    </div>
+    <div id="categories" class="row">
+        <div id="more-news" class="col-md-6 more-block">
             {% more_news %}
         </div>
-        <div id="more-sport" class="col-md-6">
+        <div id="more-sport" class="col-md-6 more-block">
             {% more_sport %}
         </div>
-        <div id="more-politics" class="col-md-6">
+    </div>
+    <div class="row">
+        <div id="more-politics" class="col-md-6 more-block">
             {% more_pol %}
         </div>
-        <div id="more-fun" class="col-md-6">
+        <div id="more-fun" class="col-md-6 more-block">
             {% more_fun %}
         </div>
     </div>

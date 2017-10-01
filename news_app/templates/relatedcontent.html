@@ -1,15 +1,16 @@
-<ul>
+{% load humanize %}
+<div>
     {% for related in relatedcontents|slice:"2" %}
-        <li class="related-content">
+        <div class="row related-content">
             <a href="/articles/{{ related.id }}">
-                <div>
+                <div class="col-xs-4 col-sm-12 rel-con-img">
                     <img class="img-responsive" src="/media/{{ related.image }}">
                 </div>
-                <div>
-                    <h3>{{ related.title }}</h3>
-                    <p> {{ related.published_date }}</p>
+                <div class="col-xs-8 col-sm-12 rel-con-text">
+                    <h4 class="rel-con-heading">{{ related.title }}</h4>
+                    <p class="rel-con-pub-date">{{ related.published_date|naturaltime }}</p>
                 </div>
             </a>
-        </li>
+        </div>
     {% endfor %}
-</ul>
+</div>

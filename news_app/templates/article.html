@@ -15,16 +15,20 @@
                 {% endautoescape %}
                 <div class="publish-date">{{ article.published_date }}</div>
             </div>
-            <div id="top-stories" class="col-xs-12 col-sm-4 col-lg-4 top-stories">
-                <h2>Top Stories</h2>
-                {%  top_stories story %}
-            </div>
-            <div id="related-content" class="col-xs-12 col-sm-4 col-lg-4">
-                <h2>Related {{ article.category }} stories</h2>
-                {%  related_content  %}
+            <div id="article-rel-cont" class="col-xs-12 col-sm-4 col-lg-4">
+                <div id="top-stories" class="top-stories">
+                    <h2>Top Stories</h2>
+                    {%  top_stories story %}
+                </div>
+                <div id="related-content">
+                    <h2>Related {{ article.category }} stories</h2>
+                    {%  related_content  %}
+                </div>
             </div>
         </div>
         <div>
-            <button class="btn btn-default" onclick="location.href='edit'">Edit</button>
+            {%  if user.is_authenticated %}
+                <button class="btn btn-default" onclick="location.href='/articles/{{ article.id }}/edit'">Edit</button>
+            {% endif %}
         </div>
 {% endblock %}

@@ -4,32 +4,25 @@ from .forms import ArticlePostForm
 from django.utils import timezone
 from .models import Article
 from django.shortcuts import redirect
+from accounts.views import login
 
-# Create your views here.
 def get_index(request):
     return render(request, 'index.html')
 
+# List of all articles, draft or published
+@login_required(login_url='/login/')
 def article_list(request):
-    """
-    Create a view that will return a
-    list of Posts that were published prior to'now'
-    and render them to the 'blogposts.html' template
-    """
     articles = Article.objects.filter(published_date__lte=timezone.now()
         ).order_by('-published_date')
     return render(request, "articles.html", {'articles': articles})
 
 
 def article_detail(request, id):
-    """
-    Create a view that return a single
-    Post object based on the post ID and
-    and render it to the 'postdetail.html'
-    template. Or return a 404 error if the
-    post is not found
-    """
     article = get_object_or_404(Article, pk=id)
-    return render(request, "article.html", {'article': article})
+    if request.user.is_anonymous and article.status == 'draft':
+        return redirect(login)
+    else:
+        return render(request, "article.html", {'article': article})
 
 @login_required(login_url='/login/')
 def new_article(request):
@@ -61,12 +54,19 @@ def edit_article(request, id):
     return render(request, 'articlepostform.html', {'form': form})
 
 def home(request):
-    home = Article.objects.filter(published_date__lte=timezone.now()
-        ).order_by('-published_date')
+    home = Article.objects.filter(published_date__lte=timezone.now(), status='published'
+                                  ).order_by('-published_date')
     return render(request, "home.html", {'home': home})
 
 
 def sport_landing(request):
-    sport = Article.objects.filter(published_date__lte=timezone.now()
+    page_title = 'Sport'
+    cat_landing = Article.objects.filter(status='published', category='sport', published_date__lte=timezone.now()
         ).order_by('-published_date')
-    return render(request, "categorylanding.html", {'sport': sport})
+    return render(request, "categorylanding.html", {'cat_landing': cat_landing, 'page_title': page_title})
+
+def politics_landing(request):
+    page_title = 'Politics'
+    cat_landing = Article.objects.filter(status='published', category='politics', published_date__lte=timezone.now()
+        ).order_by('-published_date')
+    return render(request, "categorylanding.html", {'cat_landing': cat_landing, 'page_title': page_title})

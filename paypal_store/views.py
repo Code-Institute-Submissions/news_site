@@ -1,5 +1,11 @@
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
+from .models import Product
+
+
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, "paypal/paypal_store.html", {"products": products})
 
 
 @csrf_exempt

@@ -1,15 +1,16 @@
-<ul class="news-section">
+{% load humanize %}
+<div class="news-section">
     {% for story in stories|slice:"3" %}
-        <li class="main-news">
+        <div class="row main-news">
             <a href="/articles/{{ story.id }}">
-                <div class="col-sm-4 headlines-img">
+                <div class="col-xs-4 headlines-img">
                     <img class="img-responsive" src="/media/{{ story.image}}">
                 </div>
-                <div class="col-sm-8">
+                <div class="col-xs-8">
                     <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                    <p class="publish-date">{{ story.published_date }}</p>
+                    <p class="publish-date publish-date-headlines">{{ story.published_date|naturaltime }}</p>
                 </div>
             </a>
-        </li>
+        </div>
     {% endfor %}
-</ul>
+</div>

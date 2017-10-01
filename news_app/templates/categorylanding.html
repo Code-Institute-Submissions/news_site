@@ -1,59 +1,110 @@
 {% extends 'base.html' %}
+{% load humanize %}
 {% block content %}
-    <div class="section-title"><h1>Sport</h1></div>
-    {% for story in sport|slice:"15" %}
-        {% if forloop.first %}
-            <div class="col-md-12 col-lg-12">
-                <a href="/articles/{{ story.id }}">
-                    <div class="hero col-md-8">
-                        <img class="img-responsive" src="/media/{{ story.image}}">
-                    </div>
-                    <div class="hero col-md-4">
-                        <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                        <p class="publish-date">{{ story.published_date }}</p>
-                    </div>
-                </a>
-            </div>
-        {%  endif %}
-        {% if forloop.counter == 2 %}<div class="row">{% endif %}
-        {% if forloop.counter >= 2 and forloop.counter <= 3 %}
+    <div class="row category-landing-title">
+        <div class="col-xs-12">
+            <h1>{{ page_title }}</h1>
+        </div>
+    </div>
+    {% for story in cat_landing|slice:"15" %}
+    {% if forloop.first %}
+    <div class="row">
+        <div class="row hero">
+             <a href="/articles/{{ story.id }}">
+                <div class="col-xs-12 col-md-7 hero-img">
+                    <img class="img-responsive" src="/media/{{ story.image }}">
+                </div>
+                <div class="col-xs-12 col-md-5 hero-text">
+                    <h1>{{ story.title }}</h1>
+                    <p>{{ story.intro }}</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    {%  endif %}
+    {% if forloop.counter == 2 %}
+    <div class="row category-landing-headlines">
+        <div>
+    {% endif %}
+    {% if forloop.counter >= 2 and forloop.counter <= 3 %}
             <div class="col-md-6">
                 <a href="/articles/{{ story.id }}">
                     <div>
                         <img class="img-responsive" src="/media/{{ story.image}}">
                     </div>
-                    <div>
+                    <div class="panel">
                         <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                        <p class="publish-date">{{ story.published_date }}</p>
+                        <p class="publish-date">{{ story.published_date|naturaltime }}</p>
                     </div>
                 </a>
             </div>
-        {% endif %}
-        {% if forloop.counter == 3 %}</div>{% endif %}
-        {% if forloop.counter == 4 %}<div class="row">{% endif %}
-        {% if forloop.counter >= 4 and forloop.counter <= 7 %}
-            <div class="col-md-3">
+    {% endif %}
+    {% if forloop.counter == 3 %}
+        </div>
+    </div>
+    {% endif %}
+    {% if forloop.counter == 4 %}
+    <div class="row">
+        <div>
+    {% endif %}
+    {% if forloop.counter >= 4 and forloop.counter <= 7 %}
+            <div class="col-xs-6 col-md-3">
                 <a href="/articles/{{ story.id }}">
                     <div>
                         <img class="img-responsive" src="/media/{{ story.image}}">
                     </div>
-                    <div>
-                        <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                        <p class="publish-date">{{ story.published_date }}</p>
+                    <div class="panel">
+                        <h5 class="headlines-section-titles">{{ story.title }}</h5>
+                        <p class="publish-date">{{ story.published_date|naturaltime }}</p>
                     </div>
                 </a>
             </div>
-        {% endif %}
-        {% if forloop.counter == 7 %}</div>{% endif %}
-        {% if forloop.counter >= 8 %}
-            <div class="col-md-6">
+    {% endif %}
+    {% if forloop.counter == 7 %}
+        </div>
+    </div>
+    {% endif %}
+    {% if forloop.counter >= 8 %}
+    <div class="row">
+        <div>
+    {% endif %}
+    {% if forloop.counter >= 8 and forloop.counter <= 11 %}
+            <div class="col-xs-6 col-md-3">
                 <a href="/articles/{{ story.id }}">
-                    <div class="col-md-8">
-                        <h4 class="headlines-section-titles">{{ story.title }}</h4>
-                        <p class="publish-date">{{ story.published_date }}</p>
+                    <div>
+                        <img class="img-responsive" src="/media/{{ story.image}}">
+                    </div>
+                    <div class="panel">
+                        <h5 class="headlines-section-titles">{{ story.title }}</h5>
+                        <p class="publish-date">{{ story.published_date|naturaltime }}</p>
                     </div>
                 </a>
             </div>
-        {%  endif %}
+    {% endif %}
+    {% if forloop.counter == 11 %}
+        </div>
+    </div>
+    {% endif %}
+    {% if forloop.counter >= 12 %}
+    <div class="row">
+        <div>
+    {% endif %}
+    {% if forloop.counter >= 12 and forloop.counter <= 15 %}
+            <div class="col-xs-6 col-md-3">
+                <a href="/articles/{{ story.id }}">
+                    <div>
+                        <img class="img-responsive" src="/media/{{ story.image}}">
+                    </div>
+                    <div class="panel">
+                        <h5 class="headlines-section-titles">{{ story.title }}</h5>
+                        <p class="publish-date">{{ story.published_date|naturaltime }}</p>
+                    </div>
+                </a>
+            </div>
+    {% endif %}
+    {% if forloop.counter == 15 %}
+        </div>
+    </div>
+    {% endif %}
     {% endfor %}
 {% endblock %}
