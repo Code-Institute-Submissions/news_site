@@ -1,0 +1,40 @@
+[
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$hJQsJelYWNJ7$r7nwuU4ngyeEsQ5LjMvJwqft0SGf5lK/2YLmGipktFQ=",
+        "last_login": "2017-09-13T19:03:14Z",
+        "is_superuser": false,
+        "username": "dazfrancisllpg@hotmail.com",
+        "first_name": "Darren",
+        "last_name": "Francis",
+        "email": "dazfrancisllpg@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-05-01T10:05:58Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$IQUOokBrMd38$oAXwJQKU2f5xO9JsjlqJkjOPViEAsJDo6ONtKzVHHR8=",
+        "last_login": "2017-09-29T14:41:04.090Z",
+        "is_superuser": true,
+        "username": "darrenkfrancis@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "darrenkfrancis@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-05-25T19:52:43.408Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

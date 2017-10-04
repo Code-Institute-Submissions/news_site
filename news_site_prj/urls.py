@@ -42,11 +42,11 @@ urlpatterns = [
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
     url(r'^products/$', paypal_views.all_products, name='all_products'),
 
-
 ]
 
-if settings.DEBUG:
+'''if settings.DEBUG:
     import debug_toolbar
 urlpatterns += [
     url(r'^__debug__/', include(debug_toolbar.urls)),
 ]
+'''

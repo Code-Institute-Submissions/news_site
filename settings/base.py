@@ -45,13 +45,7 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'jquery',
     'paypal_store',
-    'djangobower',
-    #'oauth_tokens',
-    #'m2m_history',
-    #'taggit',
-    #'twitter_api',
-    # 'youtube_api',
-    # 'instagram_api',
+    'djangobower'
 
 ]
 INTERNAL_IPS = ('127.0.0.1',)
