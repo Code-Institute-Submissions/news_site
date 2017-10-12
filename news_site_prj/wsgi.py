@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "news_site_prj.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings.dev")
 
 application = get_wsgi_application()
