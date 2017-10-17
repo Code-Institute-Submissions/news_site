@@ -62,7 +62,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'news_site_prj.urls'
 
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -142,8 +141,6 @@ AUTHENTICATION_BACKENDS = (
 
 MEDIA_ROOT = os.path.join(BASE_DIR, './media')
 MEDIA_URL = '/media/'
-
-
 
 
 # tinymce settings
