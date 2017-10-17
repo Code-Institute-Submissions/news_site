@@ -1,0 +1,994 @@
+[
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Editors",
+        "permissions": [
+            [
+                "add_user",
+                "accounts",
+                "user"
+            ],
+            [
+                "change_user",
+                "accounts",
+                "user"
+            ],
+            [
+                "delete_user",
+                "accounts",
+                "user"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_article",
+                "news_app",
+                "article"
+            ],
+            [
+                "change_article",
+                "news_app",
+                "article"
+            ],
+            [
+                "delete_article",
+                "news_app",
+                "article"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "Writer",
+        "permissions": [
+            [
+                "add_article",
+                "news_app",
+                "article"
+            ],
+            [
+                "change_article",
+                "news_app",
+                "article"
+            ],
+            [
+                "delete_article",
+                "news_app",
+                "article"
+            ]
+        ]
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7lybkqpwt77hwnjzk192xmrw9dy973j1",
+    "fields": {
+        "session_data": "NDhhNGQxZmMwMWJkNWY2Y2RmYjY4NGNmZjM3NjVkYzFmYTQyMWFmMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjIwMzM3NmU2Y2RiOGQzYmZmODE4NmY5YjdkMWJiYzg2MWY2ODk5YSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFjY291bnRzLmJhY2tlbmRzLkVtYWlsQXV0aCJ9",
+        "expire_date": "2017-05-15T16:09:22.920Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7o73d02jv3rx1aemlkbgbuici3ykb4e4",
+    "fields": {
+        "session_data": "YjIwYzkzODRiNDlmZGI1YzAzM2VmNDRkYWEwZTIwOTA5OTE5NWU0Nzp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImFjY291bnRzLmJhY2tlbmRzLkVtYWlsQXV0aCIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjIwMzM3NmU2Y2RiOGQzYmZmODE4NmY5YjdkMWJiYzg2MWY2ODk5YSJ9",
+        "expire_date": "2017-05-30T19:19:11.668Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "cxlaquj1qvkryfw8zekmcjk3c0ob47jj",
+    "fields": {
+        "session_data": "MzhmMWE5NjgxYTIwZGE5YWVkZjIzYWZlMTUyMTg2YTRkNWUzOTgyODp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjIiLCJfYXV0aF91c2VyX2hhc2giOiJiYzgyN2FiYWIyNjQ2ZDhmMDQ0ZWZmM2RhYzRmMjUwNGExYzE5NDFiIn0=",
+        "expire_date": "2017-06-08T19:53:25.149Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lidyrnlufcnhlfcyvksjae6bancogvpt",
+    "fields": {
+        "session_data": "NzMzNTI0ZDUxOGZhN2MyODAzMjllM2ZhODg4NDIwYjJjMjY3NzVjYzp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImFjY291bnRzLmJhY2tlbmRzLkVtYWlsQXV0aCIsIl9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiYmM4MjdhYmFiMjY0NmQ4ZjA0NGVmZjNkYWM0ZjI1MDRhMWMxOTQxYiJ9",
+        "expire_date": "2017-10-13T14:41:04.108Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qh3euoc4wja57yamlfxcfwqfhvcgms9a",
+    "fields": {
+        "session_data": "ZDM3NzI2M2QyZTk1OTRmZjRhNTVkMGM3ZmIwMDc3NmIzZTI5ZTBkZjp7Il9hdXRoX3VzZXJfaGFzaCI6ImJjODI3YWJhYjI2NDZkOGYwNDRlZmYzZGFjNGYyNTA0YTFjMTk0MWIiLCJfYXV0aF91c2VyX2lkIjoiMiIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-10-31T19:49:46.074Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "wihpqy2irc11yhjk7kelrexs1e5zgis5",
+    "fields": {
+        "session_data": "YzgxNzA4YjczNzdmNmRlZTYwZmRlZDMyNThlNzNlMmQ1YTkxYTI5ZTp7fQ==",
+        "expire_date": "2017-05-15T10:16:01.429Z"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$hJQsJelYWNJ7$r7nwuU4ngyeEsQ5LjMvJwqft0SGf5lK/2YLmGipktFQ=",
+        "last_login": "2017-09-13T19:03:14Z",
+        "is_superuser": false,
+        "username": "dazfrancisllpg@hotmail.com",
+        "first_name": "Darren",
+        "last_name": "Francis",
+        "email": "dazfrancisllpg@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-05-01T10:05:58Z",
+        "groups": [
+            [
+                "Editors"
+            ]
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$IQUOokBrMd38$oAXwJQKU2f5xO9JsjlqJkjOPViEAsJDo6ONtKzVHHR8=",
+        "last_login": "2017-10-17T19:49:46.071Z",
+        "is_superuser": true,
+        "username": "darrenkfrancis@gmail.com",
+        "first_name": "",
+        "last_name": "",
+        "email": "darrenkfrancis@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-05-25T19:52:43.408Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "paypal_store.product",
+    "pk": 1,
+    "fields": {
+        "name": "Paypal shop t shirt",
+        "description": "this is a tshirt",
+        "price": "19.99",
+        "image": "uploads/shop/paypal-shop.png"
+    }
+},
+{
+    "model": "paypal_store.product",
+    "pk": 2,
+    "fields": {
+        "name": "T- shirt 2",
+        "description": "This is another tshirt",
+        "price": "19.99",
+        "image": "uploads/shop/paypal-shop_0jzNYI4.png"
+    }
+},
+{
+    "model": "paypal_store.product",
+    "pk": 3,
+    "fields": {
+        "name": "T shirt 3",
+        "description": "This is a t shirt 3",
+        "price": "19.99",
+        "image": "uploads/shop/paypal-shop_jcwACpm.png"
+    }
+},
+{
+    "model": "paypal_store.product",
+    "pk": 4,
+    "fields": {
+        "name": "T shirt 4",
+        "description": "This is a t shirt",
+        "price": "19.99",
+        "image": "uploads/shop/paypal-shop_5PnbZtg.png"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 1,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Darren's second post",
+        "image": "",
+        "intro": "",
+        "content": "12345",
+        "created_date": "2017-05-01T10:27:41.638Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 2,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Post with image",
+        "image": "",
+        "intro": "",
+        "content": "image of llandwynn",
+        "created_date": "2017-05-01T10:34:39.488Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 3,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Darren's image post",
+        "image": "images/llanddwyn.jpg",
+        "intro": "",
+        "content": "image of llandwydyn attmept 2",
+        "created_date": "2017-05-01T10:42:03.966Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 4,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Article image 3",
+        "image": "media/llanddwyn.jpg",
+        "intro": "",
+        "content": "arictle image 3",
+        "created_date": "2017-05-01T10:45:26.016Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 5,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Article image 4",
+        "image": "media/llanddwyn_0mMStJ8.jpg",
+        "intro": "",
+        "content": "arictle image 4",
+        "created_date": "2017-05-01T10:45:53.905Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 6,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "article 6",
+        "image": "images/llanddwyn_XSwCBrl.jpg",
+        "intro": "",
+        "content": "articl 6",
+        "created_date": "2017-05-01T10:52:04.281Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 7,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "list test",
+        "image": "",
+        "intro": "",
+        "content": "test",
+        "created_date": "2017-05-01T15:14:10.428Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 8,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "Prince Philip to step down from carrying out royal engagements",
+        "image": "images/llanddwyn_udEsTXu.jpg",
+        "intro": "The Duke of Edinburgh is retiring from royal duties this autumn, Buckingham Palace has announced.",
+        "content": "Prince Philip, who turns 96 in June, made the decision himself and the Queen supported him, a spokesman said.\r\n\"I'm sorry to hear you're standing down\", one man told him at a royal lunch on Thursday. \"Well, I can't stand up much,\" the duke quipped.\r\nThe duke will attend already scheduled engagements between now and August but will not accept new invitations.\r\nThe Queen \"will continue to carry out a full programme of official engagements\", the palace said.\r\n\r\nThe duke carried out 110 days of engagements in 2016, making him the fifth busiest member of the royal family, according to Court Circular listings.\r\nHe is patron, president or a member of more than 780 organisations and will continue to be associated with them, but \"will no longer play an active role by attending engagements\", Buckingham Palace said.\r\nIn the statement, the spokesman said the duke \"may still choose to attend certain public events from time to time\".\r\nHours after the announcement, Prince Philip was at his 26th public engagement of 2017: a service and lunch for members of the Order of Merit at St James's Palace.\r\nAt the reception, the duke quipped to mathematician Sir Michael Atiyah that he \"can't stand up much\".\r\n\r\n\r\nHe stressed there were \"no health considerations\" behind the move - other than the normal health precautions for a man in his mid-90s.\r\nThe duke attended Lord's Cricket Ground to open a new stand on Wednesday and was heard joking at the event that he is the \"world's most experienced plaque unveiler\".\r\nHe is famed for off-the-cuff remarks he has made at royal engagements over the years.",
+        "created_date": "2017-05-04T18:20:06.293Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 9,
+    "fields": {
+        "author": [
+            "dazfrancisllpg@hotmail.com"
+        ],
+        "title": "All new articles will have rich text fomatting",
+        "image": "images/llanddwyn_KHaaMXK.jpg",
+        "intro": "A rich text formatter has been added to the new article form to allow authors to create rich content in their articles",
+        "content": "<div>\r\n<p><em><strong>Lorem Ipsum</strong></em> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>\r\n<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing <em>Lorem Ipsum</em> passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <em>Lorem Ipsum</em>.</p>\r\n<p>&nbsp;</p>\r\n<h3>Why use lorem ipsum?</h3>\r\n<blockquote>\r\n<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p>\r\n</blockquote>\r\n</div>\r\n<div>&nbsp;</div>",
+        "created_date": "2017-05-06T08:41:19.237Z",
+        "published_date": "2017-09-16T16:47:31.850Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 10,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Ross Barkley contract saga",
+        "image": "images/rb.jpg",
+        "intro": "Barkley still to decide on new contract offer",
+        "content": "<p class=\"sp-story-body__introduction\">Everton midfielder Ross Barkley has until the end of the Premier League season next weekend to sign a new contract or he will be sold, says manager Ronald Koeman.</p>\r\n<p>Koeman last month warned the England international, 23, that with a year left on his deal <a href=\"http://www.bbc.co.uk/sport/football/39548977\">he could be sold.</a></p>\r\n<p>Everton face Watford on Friday before finishing their Premier League campaign at Arsenal on Sunday, 21 May.</p>\r\n<p>\"Either he accepts the contract or we sell the player,\" said Koeman.</p>\r\n<p>\"But if you need so much time then you have doubts - I like to work with players who like to stay.\"</p>\r\n<p>The Dutchman said the Everton board had tried \"for a long time\" to get Barkley to sign and were already looking at replacements in attacking positions.</p>\r\n<p>He added: \"We don't wait till August - next weekend we need an answer.\"</p>\r\n<p>Barkley has scored four goals and provided eight assists in 34 Premier League appearances this season.</p>\r\n<h3 class=\"sp-story-body__cross-head\">Analysis</h3>\r\n<p><em>BBC Sport chief football writer Phil McNulty:</em></p>\r\n<p>Koeman has used tough love to get the best out of Barkley this season - from public criticism, removal at half-time at Sunderland, praise for improvement but then back to dropping him at Swansea City last weekend. The latest message was just tough - no love involved.</p>\r\n<p>Ruthless and pragmatic, the Everton boss delivered the ultimatum with the air of a man who would not lose a single second of sleep should he have to sell Barkley, making it clear he questions his long-term commitment because of his apparent reluctance to sign a new deal.</p>\r\n<p>Barkley now faces a dilemma. The boyhood Everton fan seems to believe the grass might be greener elsewhere, perhaps for Champions League football at Tottenham. But would Barkley even get in a Spurs team that already has Dele Alli and Christian Eriksen? Could he risk being a bench-warmer with a World Cup looming and England looking certain to qualify?</p>\r\n<p>For Koeman's part, this unsentimental and single-minded individual clearly believes Barkley has had long enough to decide if he wants to stay at Everton and if he wishes to leave seems perfectly content to show him the door.</p>",
+        "created_date": "2017-05-11T18:06:03.830Z",
+        "published_date": "2017-09-16T17:13:53.452Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 11,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "European Champions Cup: Clermont can cause upset against Saracens says Strettle",
+        "image": "images/stret.jpg",
+        "intro": "Saracens are the \"number one team in Europe\" but Clermont Auvergne are capable of winning Saturday's European Champions Cup final, says their former winger David Strettle.",
+        "content": "<p>The 33-year-old ex-England international moved to Clermont in 2015, after five years at Saracens.</p>\r\n<p>The defending champions are on track for a successive double as they also look to retain their Premiership title.</p>\r\n<p>\"Saracens don't have a bad day, they are consistently good\", said Strettle.</p>\r\n<p>\"They are for me the number one team in Europe,\" Strettle told AFP. \"However, Clermont's good days are better than Saracens' good days so if we are playing well, we can win.\"</p>\r\n<p>Clermont are the nearly men of French rugby, having lost to Toulon in Europe's top club tournament in the 2013 and 2015 finals, and won only one of their 12 French finals - and that at the 11th attempt.</p>\r\n<p>\"It doesn't affect me if Clermont have won or lost 11, 12 finals,\" said Strettle, who scored in their <a href=\"http://www.bbc.co.uk/sport/rugby-union/39635211\">27-22 semi-final win</a> over Leinster.</p>\r\n<p>\"That shouldn't affect me, I am playing just the one game, in my head it is the same. The players just have to ignore the history, it's just one game. For the fans, it's different.\"</p>",
+        "created_date": "2017-05-11T19:33:59.903Z",
+        "published_date": "2017-09-17T08:55:26.478Z",
+        "status": "published",
+        "is_the_chosen_one": true,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 12,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Article with a short title",
+        "image": "images/kitchen.jpg",
+        "intro": "Short title article",
+        "content": "<p>short story</p>",
+        "created_date": "2017-05-13T15:36:12.046Z",
+        "published_date": "2017-09-16T19:05:58.182Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 13,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "What Would It Be Like If The Rock Became President?",
+        "image": "images/therock.png",
+        "intro": "This is quite fun article",
+        "content": "<p>As we already reported, Dwayne 'The Rock' Johnson <a href=\"http://www.ladbible.com/entertainment/celebrity-politics-the-rock-says-its-a-real-possibility-he-could-run-for-president-20170510\">might be running for President</a>. A year ago, people probably would have just shrugged their shoulders - Johnson himself probably would have done some dumbbell shrugs - at the news, but now... well, now anything is a possibility in this post-Trump world.</p>\r\n<p>Especially for a guy with more than 58 million 'likes' on his official Facebook page and over 86 million followers on Instagram. By comparison, Donald Trump only has a mere 22 million Facebook fans and a paltry 6.7 million Instagram followers.</p>",
+        "created_date": "2017-05-13T16:12:12.945Z",
+        "published_date": "2017-09-16T18:41:33.748Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "politics"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 14,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Unarmed Airsoft Player 'Kills' Whole Team Without A Weapon",
+        "image": "images/airsoft.png",
+        "intro": "Unarmed Airsoft Player 'Kills' Whole Team Without A Weapon",
+        "content": "<p>I may not now the first thing about Airsoft, but judging by the sheer content I've been skimming through on YouTube, I'm missing out on a lot.</p>\r\n<p>This video, for example, works on many levels.</p>\r\n<p>First of all, 'Don', who uploaded the video, employs a relaxed approach to an often taken-too-seriously activity.</p>\r\n<p>Secondly, he casually has a conversation with the opposite team on their way to whip up a plate of stealth kills about pretty much doing the same thing.</p>\r\n<p>Finally, he informs a rival player to \"get ready to see a bunch of silent kills on YouTube.\" All this, and he still pulls it off, without any guns.</p>\r\n<p>Airsoft is a military simulation sport that invites punters to participate in mock combat with authentic military-style weapons and tactics. Unlike paintball, airsoft is built around 6mm round BBs made of hard plastic.</p>\r\n<p>Frist and Only Events writes on their site: \"Most airsoft guns fire 6mm plastic pellets (or BBS) at relatively low speeds which are fast enough to feel, but slow enough not to cause serious injury. They can fire the BB's up to ranges of 150ft but are a lot less painful than a paintball when they hit you.</p>\r\n<p>\"Many weapons have both semi and full auto capability and often replicate their real world counterparts in look, feel, cycling action and sometimes weight. Airsoft guns look so much like the real thing they are legally classed as a realistic imitation firearm (RIF) by the government.\"</p>\r\n<p>&nbsp;</p>",
+        "created_date": "2017-05-13T16:18:48.835Z",
+        "published_date": "2017-09-16T19:25:04.372Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "fun"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 15,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "LADs Try Absolutely Everything To Help Pull Out Their Mate's Tooth",
+        "image": "images/tooth.png",
+        "intro": "LADs Try Absolutely Everything To Help Pull Out Their Mate's Tooth",
+        "content": "<p>There's nothing quite like tooth pain. Yeah, you might have a headache or a sore foot, whatever. But when it comes to your mouth aching... I wouldn't wish it on anyone. It's agony.</p>\r\n<p>Unless you're a little kid and it's a baby tooth. Those things slid out like a dog on a waterslide. But the sad fact is that when you get older and you have a bastard of a tooth, it's got to go. Or you need root canal treatment, but that's another story.</p>\r\n<div>&nbsp;</div>\r\n<p>This guy, Dez, was having an arse of a toothache. It got so bad, that he enlisted the help of his mates including Jason Saddler, 28, from Leeds.</p>\r\n<p>Jason told the <a href=\"http://www.mirror.co.uk/news/friends-try-everything-pull-out-10385921\" target=\"_blank\" rel=\"noopener noreferrer\">Mirror</a>: \"He started complaining of tooth ache so we decided we should help him out.</p>\r\n<p>\"It took longer than when thought it would and it was a lot tougher too.</p>\r\n<p>\"We tried lots of different things, including pliers and attaching his tooth via a fishing line to the back of a car.\"</p>\r\n<p>He added: \"One of my mates eventually managed to pull his tooth out, I was quite grossed by it all but I couldn't stop watching.\"</p>\r\n<p>Who need enemies with friends like these?! Nah, I'm only messing, LADs. Good job, well done.</p>\r\n<p>&nbsp;</p>",
+        "created_date": "2017-05-13T16:22:56.795Z",
+        "published_date": "2017-09-16T20:19:12.956Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "fun"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 16,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Here Are All The Ways You Can Still Use The Old Fiver",
+        "image": "images/fiver.png",
+        "intro": "Here Are All The Ways You Can Still Use The Old Fiver",
+        "content": "<p>It's a scary thought there are around 165 million old &pound;5 notes currently in circulation, all of which will be rendered useless after midnight.</p>\r\n<p>Yes, it's a sad farewell to the cotton version of the fivers after the introduction of the brand-new plastic ones four months ago.</p>\r\n<div>&nbsp;</div>\r\n<p>From tomorrow, the old paper notes will cease to be legal tender, which begs the question: what the hell am I gonna do with all the ones I have lying around?</p>\r\n<p>Well, the obvious answer is to visit a bank, building society or Post Office. But have ever considered doing the following?</p>\r\n<p><strong>Playing Monopoly</strong></p>\r\n<p>Short of the cash needed to indulge an hour or so of board-game classic Monopoly? Why not use the old five pound notes?</p>\r\n<p>They're of similar size, similar feel, and best of all, are utterly worthless outside any family living room.</p>\r\n<p><strong>Rolling a cig</strong></p>\r\n<p>Short of rizla? Fed up of rizla? Simply itching to use your last old fiver in a stylish, symbolic way? Why not try rolling some tobacco into it.</p>\r\n<p>Sure, the experience might give you tonsillitis - as my friend once discovered when she smoked an Arriva bus ticket - or worse, but if the craving calls and you find yourself in the middle of a forest with only an old fiver, 30g of Golden Virginia and some extra-slim filters to hand, what else are you gonna do?</p>\r\n<p><strong>Betting on something unrealistic knowing that you're only going to lose a worthless fiver</strong></p>\r\n<p>'Hey, Ben.'</p>\r\n<p>'Yeah, mate.'</p>\r\n<p>'Five pound says that traffic warden across the street collapses form heat stroke in ten seconds.'</p>\r\n<p>'Go on then.'</p>\r\n<p>'Ok. 1... 2... 3... 4... 5... 6... 7...'</p>\r\n<p>'You're a fucking mug, you, mate.'</p>\r\n<p>'8... 9... 10. There it is. You win, Ben! Enjoy the money.'</p>\r\n<p>'Haha, eat THAT! Just gonna pop this little badboy into my wallet and save it fo- oh, nah, hang about. This fiver's old!'</p>\r\n<p>'Gotcha!'</p>\r\n<p>'Woah! Unbelievable! What are the <em>odds?</em> What are the odds?'</p>\r\n<p><strong>Put an end to wonky tables</strong></p>\r\n<p>You know the ones. Fold yourself up at least three old five pound notes, slide them in between the short leg of your difficult table and the floor and it's goodbye to one the first world's worst problems.</p>\r\n<p><strong>Convince somebody in the future that your old fiver is a special edition new fiver and sell it for at least &pound;80</strong></p>\r\n<p>Don't act like this isn't a pretty decent idea.</p>\r\n<p>&nbsp;</p>",
+        "created_date": "2017-05-13T16:26:59.494Z",
+        "published_date": "2017-09-16T19:24:45.378Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "fun"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 17,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Gordon Brown accuses Tories of 'waging war against poor'",
+        "image": "images/gb.jpg",
+        "intro": "Theresa May is \"waging a war against the poor\" and risks leaving the country more divided than at any time in 50 years, former PM Gordon Brown has said.",
+        "content": "<p>Addressing Labour activists in Fife, he said poverty levels were set to eclipse those last seen in the early 1990s.</p>\r\n<p>He acknowledged the challenge facing Labour but said \"no Tory prime minister should ever be given a free hand\".</p>\r\n<p>Mrs May has urged lifelong Labour voters who feel \"deserted\" by Jeremy Corbyn to put their trust in her.</p>\r\n<p>In his biggest intervention to date in the election campaign, Mr Brown attacked the record of the Conservatives and the SNP in power and said a Labour government was needed more than ever.</p>\r\n<ul class=\"story-body__unordered-list\">\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/live/uk-politics-39906665\">Election campaign latest: Watson's warning</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/election-2017-39849601\">Guide to the parties: Labour</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/uk-northern-ireland-39906986\">May urges NI politicians to come together</a></li>\r\n</ul>\r\n<p>Earlier on Saturday, Labour's deputy leader Tom Watson warned of a \"Margaret Thatcher-style landslide\" for the Conservatives if his party fails to turn around current poll numbers.</p>\r\n<p>Labour had a \"mountain to climb\" to catch up with the Tories before 8 June's vote, he conceded in an interview with <a class=\"story-body__link-external\" href=\"https://www.theguardian.com/politics/2017/may/12/tom-watson-labour-jeremy-corbyn-determined-to-stop-thatcher-style-tory-landslide\">the Guardian</a>.</p>\r\n<p>Mr Corbyn said both he and Mr Watson were \"working flat out to get Labour elected\" on 8 June.</p>\r\n<p>Asked whether senior party figures were already admitting defeat, he replied: \"Not at all.\"</p>\r\n<p>He added: \"I am out round the whole country, the party is out round the country putting out the message we are for the many, not the few.\"</p>\r\n<h2 class=\"story-body__crosshead\">'Carte blanche'</h2>\r\n<p>Mr Brown - campaigning in his former constituency, which Labour lost to the SNP in 2015 - defended the legacy of the Labour governments of which he was a key figure and suggested they were under threat from the government's squeeze on welfare spending allied to the rising cost of living.</p>\r\n<p>Citing figures <a class=\"story-body__link-external\" href=\"https://www.ifs.org.uk/publications/9192\">from the Institute for Fiscal Studies and the Joseph Rowntree Trust</a>, he claimed the number of people deemed to be living in poverty had risen last year to levels last seen in the early 1990s and that the numbers were set to rise sharply by 2022.</p>\r\n<p>\"Mrs May says she wants to unite the country but she will create a country that is more divided economically and more socially polarised than at any time in the last 50 years,\" he said.</p>\r\n<p>\"We have got to get MPs to Parliament to fight a war against poverty and stop this war against the poor.\"</p>",
+        "created_date": "2017-05-13T16:29:26.682Z",
+        "published_date": "2017-09-16T22:57:39.865Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "politics"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 18,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "NHS 'robust' after cyber-attack",
+        "image": "images/hack.png",
+        "intro": "A total of 48 NHS trusts were hit by Friday's cyber-attack, of which all but six are now back to normal, Home Secretary Amber Rudd has said.",
+        "content": "<p>Speaking after an emergency Cobra meeting, Ms Rudd said \"there's always more\" that could be done to protect against computer viruses.</p>\r\n<p>She said 97% of NHS trusts were \"working as normal\" and there was no evidence patient data was affected.</p>\r\n<p>The ransomware attack hit organisations in at least 99 countries.</p>\r\n<p>Europol described it as <a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/world-europe-39907965\">\"unprecedented\"</a> and said its cyber-crime team was working with affected countries to \"mitigate the threat and assist victims\".</p>\r\n<p>Ms Rudd insisted the government had \"the right plans\" to limit the impact of the attack, which also targeted the <a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/uk-england-39906534\">Nissan car plant in Sunderland</a>.</p>\r\n<p>Five NHS trusts are still said to be \"needing help\" with restoring their IT, including St Bartholomew's in London, the BBC's health editor Hugh Pym said.</p>\r\n<p>He said the 48 NHS trusts affected did not include GP practices and the Scottish health boards.</p>\r\n<p>NHS England said patients needing emergency treatment on Saturday evening should go to A&amp;E or access emergency services as they normally would.</p>\r\n<ul class=\"story-body__unordered-list\">\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/technology-39907049\">Blogger who halted ransomware 'hasn't slept a wink'</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/technology-39896393\">What is the global ransomware outbreak?</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/world-europe-39907965\">Cyber-attack 'unprecedented' in scale</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/technology-39905509\">Analysis: How it started</a></li>\r\n</ul>\r\n<p>The malware spread quickly on Friday leaving hospitals and GPs unable to access patient data, with many doctors resorting to using pen and paper.</p>\r\n<p>Their computers were locked by a ransomware program which demanded a payment to access blocked files.</p>\r\n<p>Hospitals across the UK were cancelling operations and ambulances had been diverted from hospitals in some areas.</p>\r\n<p>The virus, identified as WannaCry, exploits a vulnerability in Microsoft Windows software first identified by the US National Security Agency, experts have said.</p>\r\n<p>The Liberal Democrats and Labour have both demanded an inquiry into the cyber-attack.</p>\r\n<p>Lib Dem home affairs spokesman Lord Paddick said \"it has left Britain defenceless\". Labour's Jonathan Ashworth also called for a \"full, independent inquiry\" into the cyber-attack.</p>\r\n<p>Responding earlier, Ms Rudd said the government had doubled spending on cyber-security to &pound;1.9bn between 2016 and 2021.</p>\r\n<p>&nbsp;</p>",
+        "created_date": "2017-05-13T16:38:52.567Z",
+        "published_date": "2017-09-16T20:51:22.493Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "politics"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 19,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "General election 2017: Tory plan to let young erase online past",
+        "image": "images/web.jpg",
+        "intro": "The Conservatives say they want to give people the power to demand social media companies delete any embarrassing content they posted as children.",
+        "content": "<p>The largest firms would be required, if requested, to erase material created by someone before they turned 18.</p>\r\n<p>Ministers hope for co-operation from the likes of Facebook and Twitter but may impose fines if they do not comply.</p>\r\n<p>Labour said despite the \"tough talk\" ministers had proved unwilling to \"stand up\" to the industry in the past.</p>\r\n<p>But Home Secretary Amber Rudd told BBC 5 live the party had had \"early conversations\" with social media companies which indicated they were willing to work with the government on introducing \"new protections against internet harms\" if the Conservatives win the election.</p>\r\n<ul class=\"story-body__unordered-list\">\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/live/uk-politics-39906665\">Election campaign latest</a></li>\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/uk-northern-ireland-39906986\">May urges NI politicians to come together</a></li>\r\n</ul>\r\n<p>At present, users can delete their profile on social media accounts if they want to get rid of embarrassing content, but this risks losing all their online connections with people.</p>\r\n<p>Ms Rudd said further safeguards were needed to ensure that \"inappropriate\" content from yesteryear did not become a hindrance for people when they starting applying and being interviewed for jobs.</p>\r\n<p>In other election news:</p>\r\n<ul class=\"story-body__unordered-list\">\r\n<li class=\"story-body__list-item\"><a class=\"story-body__link\" href=\"http://www.bbc.co.uk/news/election-2017-39905552\">Labour's deputy leader Tom Watson</a> has urged people to vote for his party to avoid a \"Margaret Thatcher-style landslide\"</li>\r\n<li class=\"story-body__list-item\">Lib Dem leader Tim Farron has pledged to ensure 300,000 homes are built each year and give councils the power to hike tax on empty properties</li>\r\n<li class=\"story-body__list-item\">Labour has repeated its pledge to enshrine in law the \"triple lock\" commitment to raise pensions in line with wages, inflation or by 2.5% - whichever is highest - every year</li>\r\n</ul>\r\n<p>The right to remove, which would be introduced via legislation, would apply to users of \"major\" social media platforms and cover all of their own records before adulthood.</p>\r\n<p>Tory sources said the plan was not \"overly prescriptive\" and indicated that the question of content being tagged and shared by other people would have to be addressed.</p>\r\n<p>The Conservatives also want to make it easier to conduct business online, by introducing the right to insist on a so-called digital signature as a replacement for signing a contract by hand.</p>\r\n<p>The Conservatives want the social media industry to find technological changes that will protect minors from images of pornography, violence and other age-inappropriate content on social media, app stores and websites.</p>\r\n<h2 class=\"story-body__crosshead\">'Too afraid'</h2>\r\n<p>Companies would also be required not to direct users \"unintentionally\" to hate speech and other sources of harm.</p>\r\n<p>The Tories said the new digital entitlements and protections \"will be backed up with a statutory sanctions regime\" which would give regulators the ability to fine or prosecute those companies who failed in their legal duties, and to order the removal of content where it clearly breached UK law.</p>\r\n<p>But Labour's digital economy spokesman Louise Haigh said: \"We pressed the government to introduce tough new codes to tackle extremist and illegal content proliferating across the web, but they categorically refused to act in the Digital Economy Act.</p>\r\n<p>\"The Home Office were crystal clear they did not want to legislate and that they believed the voluntary framework was sufficient.</p>",
+        "created_date": "2017-05-13T16:40:02.819Z",
+        "published_date": "2017-09-16T18:45:19.681Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "politics"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 20,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Welsh Premier League play-off final: Bangor City 1-0 Cardiff Met",
+        "image": "images/bangor.jpg",
+        "intro": "Bangor City ended the European hopes of student side Cardiff Met with victory in the Welsh Premier League play-off final at Nantporth.",
+        "content": "<p>Dean Rittenberg scored the only goal in the first half, converting player-manager Gary Taylor-Fletcher's cross.</p>\r\n<p>Bangor reached Europe for the first time since the 2013-14 season.</p>\r\n<p>They join league runners-up Gap Connah's Quay and Welsh Cup winners Bala Town as Wales' representatives in next season's Europa League.</p>\r\n<p>Taylor-Fletcher said: \"We had to dig in at the end and we were hanging in but I can't ask for anything more. We're in Europe, it's all we wanted.</p>\r\n<p>\"We knew we had the quality and that was the edge. They had the fitness but we had the final quality.\"</p>\r\n<p><a href=\"http://www.bbc.co.uk/sport/football/39895023\">Cardiff Met only secured promotion</a> to Welsh football's top flight at the start of the season after winning the Welsh League Division One title.</p>",
+        "created_date": "2017-05-13T19:52:37.062Z",
+        "published_date": "2017-09-16T18:44:56.633Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 21,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Gennady Golovkin v Saul 'Canelo' Alvarez: Las Vegas fight ends in draw",
+        "image": "images/ggg_.jpg",
+        "intro": "Gennady Golovkin's world middleweight title fight with Saul 'Canelo' Alvarez ended in a controversial draw.",
+        "content": "<p>After a closely fought bout in Las Vegas, one judge scored it 118-110 for Alvarez, another 115-113 for Golovkin and the third a 114-114 draw.</p>\r\n<p>There were boos when the decision was announced at the T-Mobile Arena, and both boxers shook their heads.</p>\r\n<p>Kazakh Golovkin, 35, retains his WBA, WBC and IBF titles and remains unbeaten in 38 fights.</p>\r\n<p>His Mexican opponent, 27, started and finished an absorbing fight the stronger, and also produced some of the more eye-catching shots.</p>\r\n<p>Golovkin, though, landed more punches and had the better of the middle rounds.</p>\r\n<p>Judge Adalaide Byrd had Alvarez as a clear winner, Dave Moretti scored the bout for Golovkin and Dan Trella had the fighters level.</p>\r\n<p>Alvarez's record now stands at 49 wins (34 KO), two draws and one defeat from 52 fights.</p>\r\n<p>In the build-up to the fight, Golovkin had described it as the \"biggest of this era\" - and both men later said they were open to a rematch.</p>\r\n<p>&nbsp;</p>\r\n<p>Former heavyweight world champion&nbsp;Lennox Lewis&nbsp;tweeted: \"I have GGG as clear winner. Loved that Canelo swung to the very end! Both are winners tonight.\"</p>\r\n<p>Former two-weight world champion&nbsp;Paulie Malignaggi&nbsp;said: \"Canelo was never in it once it passed about round four or so.\"</p>\r\n<p>Floyd Mayweather Sr,&nbsp;whose son recently beat mixed martial arts fighter Conor McGregor in a boxing match, said the 118-110 scorecard was \"ridiculous\" and he saw the fight as a draw.</p>\r\n<p>\"I didn't think either one of them fought that good,\" he said. \"That fight was kind of close, real close.\"</p>\r\n<p>Former middleweight champion and co-promoter&nbsp;Bernard Hopkins&nbsp;said: \"No-one is saying that Golovkin got robbed.</p>\r\n<p>\"What they are saying is the score of a judge, who has been around for a long time and did a lot of my fights, maybe saw things that we didn't see and maybe counted things that we should know should have been counted.</p>\r\n<p>\"The Nevada State Athletic Commission was asked if anything was going to be done about this. We don't know, we hope.</p>\r\n<p>\"I don't think anyone, if you take the score away, would say Golovkin would have got robbed if the score was even closer than it should have been, and Canelo would have won.</p>\r\n<p>\"The only dispute is that it was a score was so far away from reality that made the fight look the way it did. I'm saying they are two separate situations.\"</p>",
+        "created_date": "2017-09-17T09:09:59.187Z",
+        "published_date": "2017-09-17T09:11:02.664Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 22,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Sergio Aguero: Manchester City striker is a 'legend' - Pep Guardiola",
+        "image": "images/aguero.jpg",
+        "intro": "Manchester City manager Pep Guardiola praised \"legend\" Sergio Aguero, after the striker moved two goals away from equalling the club's all-time record.",
+        "content": "<p>The Argentina forward scored his&nbsp;<a href=\"http://www.bbc.co.uk/sport/football/41210048\">sixth Premier League hat-trick</a>&nbsp;as City beat Watford 6-0 on Saturday.</p>\r\n<p>The 29-year-old has 175 goals since joining City in 2011, with Eric Brook holding the club record of 177 goals.</p>\r\n<p>\"Hopefully that [the record] will happen very soon, and we can have a big celebration,\" said Guardiola.</p>\r\n<p>Ex-England winger Brook, who was at City from 1928-1940, scored his goals in 494 appearances. Aguero has scored his in 259 games.</p>\r\n<p>Guardiola added: \"He's a legend, and it's a part of history in the club. Aguero's numbers speak for themselves - he is amazing.</p>\r\n<p>Aguero's hat-trick at Vicarage Road put him on 127 Premier League goals, moving him above Robbie Keane and Nicolas Anelka and level with Jimmy Floyd Hasselbaink on the competition's all-time list.</p>\r\n<p>He has scored five goals in five games this season.</p>\r\n<p>Former England striker and record Premier League goalscorer Alan Shearer (260 in 441 appearances) challenged Aguero to get 30 league goals this season.</p>\r\n<p>Aguero has scored 20-plus goals in four of the past six seasons, 26 being his highest tally in the 2014-15 campaign.</p>\r\n<p>Ex-Liverpool striker Luis Suarez was the latest player to score 30, in the 2013-14 season. Tottenham striker Harry Kane was the Premier League's top scorer in the past two seasons with 29 and 25 goals.</p>\r\n<p>\"Watford could not get near Aguero,\" said Shearer on Match of the Day. \"It was a top performance. For a centre-forward to play in this City team must be an absolute dream, with the chances created and the pace going forward.</p>\r\n<p>\"I think you are looking for Aguero to get 30 league goals this year.\"</p>\r\n<p>Former England defender Phil Neville added: \"Aguero does two things really well. When he goes short, he takes a defender into an area he's not comfortable with.</p>\r\n<p>\"But when he runs in behind it's very difficult because he's so small with a low centre of gravity.\"</p>",
+        "created_date": "2017-09-17T09:14:37.089Z",
+        "published_date": "2017-09-17T09:14:37.089Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 23,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Paris climate deal: US denies it will stay in accord",
+        "image": "images/factory.jpg",
+        "intro": "The US has insisted it will leave the Paris climate accord, despite reports that it may be softening its stance.",
+        "content": "<p>Following a meeting of environment ministers on Saturday, the EU climate commissioner, Miguel Arias Canete, said Trump officials had indicated the US would either stay in the 2015 accord or review its terms.</p>\r\n<p>But the White House insisted there had been \"no change\" in the US position.</p>\r\n<p>In June President Donald Trump said the US would withdraw from the deal</p>\r\n<p>He said it was part of his \"solemn duty to protect America\" and he would seek a new deal that would not disadvantage US businesses.</p>\r\n<p>But opponents say withdrawing from the accord is an abdication of US leadership on a key global challenge.</p>\r\n<p>The Paris agreement commits the US and 187 other countries to keeping rising global temperatures \"well below\" 2C above pre-industrial levels and \"endeavour to limit\" them even more, to 1.5C.</p>\r\n<p>Only Syria and Nicaragua did not sign up to the deal.</p>\r\n<h2>What did Trump originally announce in June?</h2>\r\n<p>Speaking&nbsp;<a href=\"http://www.bbc.co.uk/news/world-us-canada-40127326\">in the White House Rose Garden,</a>&nbsp;he characterised the Paris agreement as a deal that aimed to hobble, disadvantage and impoverish the US.</p>\r\n<p>He claimed the agreement would cost the US 6.5 million jobs and $3tn in lost GDP - while rival economies like China and India were treated more favourably.</p>\r\n<p>\"In order to fulfil my solemn duty to protect America and its citizens, the United States will withdraw from the Paris climate accord... but begin negotiations to re-enter either the Paris accord or a really entirely new transaction on terms that are fair to the United States,\" he said.</p>\r\n<p>During his visit to France in July, however,&nbsp;<a href=\"http://www.bbc.co.uk/news/world-europe-40597244\">Mr Trump hinted</a>&nbsp;that the US could shift its position on the deal - but did not elaborate.</p>\r\n<p>\"Something could happen with respect to the Paris accord... We'll see what happens.\"</p>\r\n<ul>\r\n<li><a href=\"http://www.bbc.co.uk/news/science-environment-40120770\">Five effects of US pullout</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/world-us-canada-40128266\">How did world react?</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/science-environment-24021772\">What is climate change?</a></li>\r\n</ul>\r\n<h2>What is now being reported?</h2>\r\n<p>On Saturday,&nbsp;<a href=\"https://www.wsj.com/articles/trump-administration-wont-withdraw-from-paris-climate-deal-1505593922\">the Wall Street Journal quoted</a>&nbsp;Mr Arias as saying that Trump administration officials said the US would not pull out of the agreement, and were offering to re-engage in the deal.</p>\r\n<p>The WSJ said the shift in the position came at a meeting of environment ministers from about 30 countries at a gathering in Montreal, Canada.</p>\r\n<p>That meeting was attended by a US observer.</p>\r\n<p>The US \"stated that they will not renegotiate the Paris Accord, but they [will] try to review the terms on which they could be engaged under this agreement,\" Mr Canete said.</p>\r\n<p>He said that \"there would be a meeting on the sidelines of next week's UN General Assembly with American representatives \"to assess what is the real US position\", according to the AFP news agency.</p>\r\n<p>\"It's a message which is quite different to the one we heard from President Trump in the past,\" Mr Canete added.</p>\r\n<ul>\r\n<li><a href=\"http://www.bbc.co.uk/news/science-environment-35073297\">What is in the Paris climate deal?</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/world-us-canada-40128026\">Will this hurt Trump?</a></li>\r\n</ul>\r\n<p>At the same time, Chilean Environment Minister Marcelo Mena&nbsp;<a href=\"https://twitter.com/marcelomena/status/909171393518063616\">tweeted (in Spanish):</a>&nbsp;\"I was in the meeting, and the [US] negotiator effectively did not close the door on continuing in the agreement, and ruled out looking for a new agreement.\"</p>\r\n<p>But in a statement later on Saturday, White House spokeswoman Sarah Huckabee Sanders said: \"There has been no change in the United States' position on the Paris agreement,</p>\r\n<p>\"As the president has made abundantly clear, the United States is withdrawing unless we can re-enter on terms that are more favourable to our country.\"</p>\r\n<h2>How could this change things?</h2>\r\n<p>Bloomberg&nbsp;<a href=\"https://www.bloomberg.com/news/articles/2017-09-16/eu-sees-u-s-re-engaged-in-paris-deal-white-house-says-no-change\">reported</a>&nbsp;that the US is \"no longer seeking to withdraw from the pact and then renegotiate it, but rather wants to re-engage with the Paris Agreement from within\".</p>\r\n<p>While the White House insists its stance has not changed, deciding not to withdraw from the Paris deal and instead focus on negotiating while remaining a signatory would represent a significant about-turn.</p>\r\n<p>The&nbsp;<a href=\"http://www.latimes.com/politics/washington/la-na-essential-washington-updates-white-house-may-reverse-self-on-1505595971-htmlstory.html\">Los Angeles Times said</a>&nbsp;staying in the Paris deal would be \"one of the most controversial\" reversals of the Trump presidency.</p>\r\n<p>It would also risk angering Mr Trump's more conservative supporters at a time he is facing criticism for engaging with Democratic leaders, the liberal magazine&nbsp;<a href=\"http://www.motherjones.com/environment/2017/09/wsj-says-trump-has-changed-his-mind-about-leaving-the-paris-agreement/\">Mother Jones wrote</a>.</p>",
+        "created_date": "2017-09-17T09:33:24.202Z",
+        "published_date": "2017-09-17T09:33:24.202Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 24,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Boris Johnson insists he is 'all behind' May over Brexit",
+        "image": "images/boris.jpg",
+        "intro": "Boris Johnson has insisted he is \"all behind\" Theresa May after setting out his own vision of Britain after Brexit.",
+        "content": "<p>Writing in the&nbsp;<a href=\"http://www.telegraph.co.uk/news/2017/09/15/boris-johnson-vision-bold-thriving-britain-enabled-brexit/\">Daily Telegraph</a>, the foreign secretary revived the contested claim Brexit could free up &pound;350m a week for the NHS and also said the UK should not pay for EU single market access.</p>\r\n<p>He later tweeted he backed the PM, who is making a major EU speech next week.</p>\r\n<p>Lib Dem leader Sir Vince Cable said the &pound;350m figure was \"a lie\" while Jeremy Corbyn said it showed Tory divisions.</p>\r\n<p>In a 4,000 word piece for the newspaper, Mr Johnson expanded at length on his views about the Brexit negotiations with the EU, and the opportunities he said it would give a \"bold, thriving\" Britain when it leaves in March 2019.</p>\r\n<p>If Britain did continue its membership of the single market and customs union it would make a \"complete mockery\" of last year's referendum result, he wrote.</p>\r\n<ul>\r\n<li><a href=\"http://www.bbc.co.uk/news/uk-politics-32810887\">Brexit: All you need to know</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/uk-politics-41274743\">Could PM's Florence speech prove a game changer?</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/world-europe-40247362\">Brexit: What is at stake in EU-UK talks?</a></li>\r\n</ul>\r\n<p>The UK, he argued, would be \"roughly\" &pound;350m better off once it had \"settled its accounts\" with the EU and he said it would be \"fine\" if \"a lot of that money\" was spent on the health service.</p>\r\n<p><a href=\"https://twitter.com/BorisJohnson/status/909010338632396800\">Writing later on Twitter</a>, Mr Johnson said that he was \"looking forward\" to the prime minister's speech next Friday in Florence - in which she is expected to set out details of the UK's \"special partnership\" with the EU after Brexit.</p>\r\n<p>\"All behind Theresa for a glorious Brexit,\" he wrote.</p>\r\n<p>The BBC's political correspondent Leila Nathoo said that although sources close to Mr Johnson insist his article has nothing to do with leadership ambitions, the intervention has revived speculation that he is still eyeing the top job.</p>\r\n<p>Asked for her response, Home Secretary Amber Rudd said she was focused on co-ordinating the government's response to the Parsons Green bomb attack and had hadn't a chance to look at the article.</p>\r\n<h2>'Take cover'</h2>\r\n<p>But Sir Vince Cable suggested the foreign secretary was pushing for \"a far more extreme\" version of Brexit in pursuit of his own personal ambitions.</p>\r\n<p>\"On his central point, the &pound;350m a week, this is a lie. He knows it is a lie and endlessly repeating it does not make it the truth,\" he said.</p>\r\n<p>And the Lib Dems Brexit spokesman Tom Brake told his party conference - which began on Saturday - that far from enhancing the NHS, the UK's exit would have a \"calamitous effect on our cherished public services\".</p>\r\n<p>Chancellor Philip Hammond has suggested there is a consensus in the cabinet for the need for a transitional period of several years to minimise the disruption from Brexit - which would \"look a lot like the status quo\" in many ways.</p>\r\n<p>This has prompted unconfirmed speculation that the UK could potentially pay the EU for a limited period of time to continue to access the single market on an existing tariff-free basis.</p>\r\n<h2>'Tory conflicts'</h2>\r\n<p>Labour leader Jeremy Corbyn said Mr Johnson's comments \"laid bare the conflicts at the heart of Theresa May's government over Brexit\" and undermined the prime minister's authority.</p>\r\n<p>He said: \"The foreign secretary even has the gall to dredge up the fantasy of &pound;350m a week extra for the NHS.</p>\r\n<p>\"The prime minister must spell out now how this will be paid for, or stand condemned for once again trying to mislead the British public.\"</p>\r\n<p>In the run up to the referendum, the Leave campaign - of which Mr Johnson was a key figure - claimed the UK sent &pound;20bn a year, or &pound;350m a week, to Brussels in 2014.</p>\r\n<p>Vote Leave emblazoned the figure on its campaign bus and said the money could be used to fund extra spending on public services such as the NHS.</p>\r\n<p>But&nbsp;<a href=\"https://www.statisticsauthority.gov.uk/wp-content/uploads/2016/04/Letter-from-Sir-Andrew-Dilnot-to-Norman-Lamb-MP-210416.pdf\">a letter from the head of the UK statistics watchdog Sir Andrew Dilnot</a>during the referendum campaign described the figure as \"potentially misleading\".</p>",
+        "created_date": "2017-09-17T09:35:39.360Z",
+        "published_date": "2017-09-17T09:35:39.360Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "politics"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 25,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Wire star calls for more opportunities for black British actors",
+        "image": "images/lester.jpg",
+        "intro": "The US star of The Wire has called for more opportunities for black British actors to stop them heading abroad.",
+        "content": "<p>\"They're going where the work is,\" said Clarke Peters, who played detective Lester Freamon in the TV crime drama.</p>\r\n<p>\"When Britain decides to build up its film industry and compete, then those cats will stay here,\" he continued.</p>\r\n<p>Star Wars' John Boyega and Get Out star Daniel Kaluuya are among those who have won high-profile Hollywood roles after making their mark in UK productions.</p>\r\n<p>Others include David Oyelowo, who played Martin Luther King in Selma, and David Harewood, star of Homeland and Supergirl.</p>\r\n<p>Peters, who was born in New York and came to work in Britain in the 1970s, said the trend could be reversed \"if Pinewood was where Hollywood is and had the same reputation and kudos\".</p>\r\n<p>\"I came here because this is where theatre started for me,\" he told the BBC. \"I guess I've done the same thing, but in the opposite direction.\"</p>\r\n<p>Peters' own reputation on this side of the Atlantic is secure thanks to Five Guys Named Moe, a musical revue that ran for more than four years in the West End in the 1990s.</p>\r\n<p>The show - which features songs by R&amp;B pioneer Louis Jordan - has now returned to London in a purpose-built theatre in Marble Arch, with Peters himself directing.</p>\r\n<p>The show, which began its life in its current form at the Theatre Royal Stratford East in east London, tells of a man with romantic troubles who is visited by five sharp-suited apparitions.</p>\r\n<p>They proceed to set him straight with the help of some of Jordan's best-known tracks, among them Ain't Nobody Here But Us Chickens and Is You is Or Is You Ain't My Baby?</p>\r\n<p>\"Why now? Because it's needed,\" said Peters after an opening night performance attended by Elaine Paige, Matt Lucas and his fellow Doctor Who companion Pearl Mackie.</p>\r\n<p>\"Have you seen the state of the world today?\" he asked rhetorically. \"Don't you think you need Five Guys to come bring a little joy to your life?\"</p>\r\n<p>By Five Guys, of course, he means the musical, and not the burger chain with which it shares part of its name.</p>\r\n<p>\"I'd like to know who did that,\" sighed 65-year-old Peters, who can be seen on the last night of this year's&nbsp;<a href=\"https://whatson.bfi.org.uk/lff/Online/default.asp\">London Film Festival</a>&nbsp;in dark comedy Three Billboards Outside Ebbing, Missouri.</p>\r\n<p>\"If they were a part of this, I might be retiring right about now.\"</p>\r\n<p>Five Guys Named Moe is currently booking until February 2018.</p>",
+        "created_date": "2017-09-17T09:47:21.943Z",
+        "published_date": "2017-09-17T09:48:46.973Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 26,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Ryanair to cancel 40-50 flights per day for six weeks",
+        "image": "images/ryan.jpg",
+        "intro": "Ryanair is to cancel 40 to 50 flights every day for the next six weeks, in a bid to improve punctuality of flights.",
+        "content": "<p>The budget Irish-based airline announced the plan on Friday, saying that it was \"unacceptable\" that its punctuality had fallen below 80% in the first half of this month.</p>\r\n<p>It also said it had to clear a backlog of staff leave by the end of the year.</p>\r\n<p>The move could affect up to 285,000 passengers, who will be offered alternative flights or refunds.</p>\r\n<p>Ryanair said that less than 2% of its flights would be cancelled and the move would help it hit its annual punctuality target of 90%.</p>\r\n<p>But passengers have complained about the short notice of the cancellations.</p>\r\n<ul>\r\n<li><a href=\"http://www.bbc.co.uk/news/uk-england-leicestershire-41282382\">Ryanair plane makes emergency landing at East Midlands Airport</a></li>\r\n<li><a href=\"http://www.bbc.co.uk/news/business-41171871\">Ryanair cuts cabin baggage limit to speed up boarding</a></li>\r\n</ul>\r\n<p>Gary Cummings was due to fly from Leeds to Bratislava on Friday morning.</p>\r\n<p>On Thursday night he received a text message from Ryanair, saying his flight had been cancelled.</p>\r\n<p>The only alternative flight he was offered was on Monday - when he was originally due to be returning to Leeds.</p>\r\n<p>\"We were left in limbo really,\" he told BBC Radio 5 live.</p>\r\n<div>&nbsp;</div>\r\n<div>&nbsp;</div>\r\n<p>But customers do have rights under the European Passenger Rights legislation.</p>\r\n<p>\"The rules say if the airline doesn't have a suitable alternative flight, you have to be booked on a rival airline,\" said Simon Calder, travel editor of the Independent.</p>\r\n<p>He said passengers should also be able to claim compensation for the cancellations.</p>\r\n<p>\"It's a really odd thing in terms of customer care, to say we want to improve the operation by keeping more planes on the ground,\" he told the BBC.</p>",
+        "created_date": "2017-09-17T10:11:37.743Z",
+        "published_date": "2017-09-17T10:11:37.743Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 27,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Ronald Koeman: Everton manager concerned about players",
+        "image": "images/koman.jpg",
+        "intro": "Everton manager Ronald Koeman said he is \"worried\" about his team going into Sunday's Premier League fixture at Manchester United.",
+        "content": "<p>His concerns follow&nbsp;<a href=\"http://www.bbc.co.uk/sport/football/41227367\">Thursday's 3-0 loss at Atalanta,</a>&nbsp;their third successive defeat with eight goals conceded and none scored in three games.</p>\r\n<p>\"I will have a meeting with the players - the experienced ones must stand up,\" the Dutchman said.</p>\r\n<p>\"The defeat was a wake-up call. I saw the team with a lot of doubts.\"</p>\r\n<p>He added: \"I wasn't worried after Chelsea [2-0 defeat]. The reaction should have started in the second half against Tottenham [3-0 loss].</p>\r\n<p>\"But that and the first half against Atalanta is enough reason to be worried.\"</p>\r\n<p>During Friday's news conference, Koeman was also asked whether expectations were too high after Everton spent more than &pound;130m during this summer's transfer window.</p>\r\n<p>\"Maybe it's really easy to tell everybody that Everton will be fourth in the table and will fight for the Champions League because they have spent a lot of money,\" he added.</p>\r\n<p>\"But maybe the rest of the teams have spent even more money. And they didn't spend that money this summer because they already have the team they need.</p>\r\n<p>\"Our team is in transition. Everybody knows as young player and foreign player coming to the Premier League, they need time.\"</p>\r\n<p>He added: \"Everybody knows if you come to the league as a foreign player you need time. Big teams that get big signings, they get one year to adapt.</p>\r\n<p>\"We have other players with doubts. I don't want to make it individual because it's a team performance, but we need to be more aggressive.\"</p>\r\n<p>The Toffees are 16th in the Premier League table with four points from four games.</p>",
+        "created_date": "2017-09-17T10:13:03.792Z",
+        "published_date": "2017-09-17T10:13:03.792Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 28,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Singapore Grand Prix: Lewis Hamilton needs 'a miracle' from fifth on grid",
+        "image": "images/hamilton.jpg",
+        "intro": "Mercedes' Lewis Hamilton is looking for a \"miracle\" to limit the damage to his title hopes in Sunday's Singapore Grand Prix, which starts at 13:00 BST.",
+        "content": "<p>Hamilton qualified fifth, with championship rival&nbsp;<a href=\"http://www.bbc.co.uk/sport/formula1/41293329\">Sebastian Vettel of Ferrari on pole,</a>&nbsp;giving the German a strong chance to retake the lead.</p>\r\n<p>\"Fifth place is definitely not good compared to first,\" said Hamilton, who is three points ahead of the German.</p>\r\n<p>\"I am going to have to figure out how to pull a miracle out of somewhere.\"</p>\r\n<p>Hamilton said he was pleased with his performance - he was 0.684 seconds quicker than team-mate Valtteri Bottas - but that the Mercedes was struggling at the tight and twisty Marina Bay street circuit.</p>\r\n<p>He ended up&nbsp;<a href=\"http://www.bbc.co.uk/sport/formula1/2017/singapore-grand-prix/results/qualifying\">0.635secs slower than Vettel,</a>&nbsp;with the Red Bulls of Max Verstappen and Daniel Ricciardo and the second Ferrari of Kimi Raikkonen also ahead of him.</p>\r\n<p>\"I gave it everything,\" said Hamilton, who won the previous two races in Belgium and Italy.</p>\r\n<p>\"I got everything I could out of the car. I am happy with my performance, I am just frustrated we weren't able to be quicker and compete with the Ferraris.</p>\r\n<p>\"That's a seriously healthy gap. It's strange how it goes from one track to another. Hopefully the next races are more in our direction.</p>\r\n<p>\"We have seen they are very good on the low-speed circuits. The characteristics of our car don't like this track, that's for sure.</p>\r\n<p>\"It is a long circuit with a lot of corners so you imagine one of the shorter circuits where we had the deficits, like Hungary, give it another 10 more corners and it would be very similar there.</p>\r\n<p>\"It's just our car does not like this characteristics of this circuit and it's something we need to improve for next year.\"</p>",
+        "created_date": "2017-09-17T10:16:04.302Z",
+        "published_date": "2017-09-17T10:16:04.302Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 29,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Pound hits highest since Brexit vote on rate rise speech",
+        "image": "images/pound.jpg",
+        "intro": "The pound has hit its highest level against the dollar since the Brexit vote after a senior Bank of England official fuelled speculation it could raise rates in the coming months.",
+        "content": "<p>Gertjan Vlieghe, who has previously argued against a rate rise, said the \"moment is approaching\" when interest rates might need to go up.</p>\r\n<p>The Bank kept rates at 0.25% this week, but&nbsp;<a href=\"http://www.bbc.co.uk/news/business-41266528\">hinted at a rise in the future.</a></p>\r\n<p>Sterling rose more than 1% against the dollar to hit $1.3610.</p>\r\n<p>That was its highest level since 24 June, the day after the Brexit vote.</p>\r\n<div id=\"ns_chart_pounddollar150917\">\r\n<div id=\"59be4b868fe28\">The pound also gained more than 1.1% against the euro to rise to 1.137 euros by Friday night..</div>\r\n</div>\r\n<p>Analysts have suggested the Bank could now lift interest rates back to 0.5%, the level they were before the EU referendum, as soon as November.</p>\r\n<p>Mr Vlieghe, a member of the Bank's interest rate-setting committee, said&nbsp;<a href=\"http://www.bankofengland.co.uk/publications/Pages/speeches/2017/995.aspx\">in a speech on Friday</a>: \"Until recently, I thought the appropriate response of monetary policy was to be patient, given modest growth and subdued underlying inflationary pressure.</p>\r\n<p>\"But the evolution of the data is increasingly suggesting that we are approaching the moment when Bank Rate may need to rise.\"</p>\r\n<p>Mr Vlieghe, who was the first Bank member to vote for a rate cut after the Brexit vote, said there was now growing evidence the UK economy was picking up.</p>\r\n<h2>'Concerted effort'</h2>\r\n<p>He pointed to unemployment falling to record lows, as well as signs that households are spending more and that wages are rising in the private sector.</p>\r\n<p>\"If these data trends of reducing slack, rising pay pressure, strengthening household spending and robust global growth continue, the appropriate time for a rise in Bank Rate might be as early as in the coming months,\" Mr Vlieghe said.</p>\r\n<p>Markets which track investors' expectations for the Bank rate now give a 63% likelihood of a rise in November, the highest since the Brexit vote. At the start of the week the futures markets gave only a 20% chance.</p>\r\n<p>The return on government bonds, often influenced by interest rate expectations, also hit 15-month highs on Friday.</p>\r\n<p>The yield on five-year UK bonds rose 7 basis points to hit 0.772%, the highest since 23 June, 2016, the day Britain voted to leave the European Union.</p>\r\n<p>Howard Archer, chief economic adviser to the EY Item Club, said: \"Vlieghe's comments will support belief that the Bank of England could well raise interest rates before the end of 2017 with a move as soon as November very much in play.\"</p>\r\n<p>Mr Archer cautioned that the Bank of England had \"talked up the likelihood of an interest rate hike then failed to follow through\" in the past.</p>\r\n<p>\"But there does seem to be a more concerted effort this time around and more unanimity within the Monetary Policy Committee of the case for a hike,\" he said.</p>\r\n<p>The Bank said on Thursday that higher inflation and a pick up in growth could lead to a rate rise soon.</p>\r\n<p>Growing speculation of a rate rise lifts the pound against other currencies because higher interest rates would make sterling more attractive to investors.</p>\r\n<p>The Bank dropped heavy hints in 2014, and again last year before the EU referendum, that it could raise rates, only to later change course.</p>",
+        "created_date": "2017-09-17T10:19:34.940Z",
+        "published_date": "2017-09-17T10:19:34.940Z",
+        "status": "published",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "news"
+    }
+},
+{
+    "model": "news_app.article",
+    "pk": 30,
+    "fields": {
+        "author": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "title": "Chengdu Open: Kyle Edmund loses to Jared Donaldson in second round",
+        "image": "images/edmund.jpg",
+        "intro": "Britain's Kyle Edmund was knocked out of the Chengdu Open in the second round by American Jared Donaldson.",
+        "content": "<p>The world number 46 was beaten 6-0 1-6 6-4 by 58th-ranked Donaldson, who was dominant on his first serve.</p>\r\n<p>Edmund, 22, had seen off Bernard Tomic in the first round, but was broken once by Donaldson, 20, in the third set as his return from injury was halted.</p>\r\n<p>The British number two retired in the US Open third round earlier this month&nbsp;<a href=\"http://www.bbc.co.uk/sport/tennis/41131542\">because of a neck injury.</a></p>\r\n<p>After a first set in which Edmund failed to win a game on serve, the Briton responded well in the second to level at 1-1.</p>\r\n<p>But he struggled once again with his first serve in the third and, despite saving two break points, Donaldson got the crucial breakthrough at 5-4 and served out the game.</p>",
+        "created_date": "2017-09-27T20:16:24.667Z",
+        "published_date": "2017-09-27T20:16:24.653Z",
+        "status": "draft",
+        "is_the_chosen_one": false,
+        "twitterStatus": "",
+        "youtubeVideo": "",
+        "instaPic": "",
+        "category": "sport"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-09-16T15:22:38.910Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "1",
+        "object_repr": "Editors",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-09-16T15:23:05.211Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "object_id": "2",
+        "object_repr": "Writer",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-09-16T15:32:50.465Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "dazfrancisllpg@hotmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-09-21T21:24:14.307Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "paypal_store",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "Product object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-09-22T09:53:56.597Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "paypal_store",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "Product object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-09-22T09:54:38.312Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "paypal_store",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "Product object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-09-22T09:55:02.868Z",
+        "user": [
+            "darrenkfrancis@gmail.com"
+        ],
+        "content_type": [
+            "paypal_store",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "Product object",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]

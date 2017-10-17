@@ -15,3 +15,6 @@ SITE_URL = [
     ]
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/tuux4YjAo2U58peXPSC7/'
 PAYPAL_RECEIVER_EMAIL = 'nisha3uk@hotmail.com'
+
+
+
