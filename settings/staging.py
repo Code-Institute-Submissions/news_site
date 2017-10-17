@@ -14,5 +14,5 @@ DATABASES = {
 SITE_URL = [
     'django-news-site.herokuapp.com'
     ]
-PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
-PAYPAL_RECEIVER_EMAIL = '<your paypal merchant email goes here>'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/tuux4YjAo2U58peXPSC7/'
+PAYPAL_RECEIVER_EMAIL = 'nisha3uk@hotmail.com'
