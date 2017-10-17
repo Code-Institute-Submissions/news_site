@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'emoticons',
     'paypal.standard.ipn',
     'jquery',
-    'paypal_store',
+    'paypal_store'
 
 ]
 INTERNAL_IPS = ('127.0.0.1',)

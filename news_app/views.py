@@ -6,8 +6,6 @@ from .models import Article
 from django.shortcuts import redirect
 from accounts.views import login
 
-def get_index(request):
-    return render(request, 'index.html')
 
 # List of all articles, draft or published
 @login_required(login_url='/login/')
