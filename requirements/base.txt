@@ -34,3 +34,4 @@ six==1.10.0
 sqlparse==0.2.3
 uritemplate==3.0.0
 wheel==0.24.0
+whitenoise==3.2
