@@ -100,6 +100,12 @@ hr {
     padding-bottom: 5px;
 }
 
+.headlines-img {
+        padding-left: 0px;
+        padding-right: 0px;
+}
+
+
 .main-news {
     background-color: #FFF;
     margin-bottom: 10px;
@@ -109,7 +115,7 @@ hr {
 
 .panel {
         height: 100px;
-    }
+}
 
 .more-stories {
     background-color: #FFF;
