@@ -28,7 +28,6 @@
             <li><a href="{% url 'home' %}">News</a></li>
             <li><a href="{% url 'sport_landing' %}">Sport</a></li>
             <li><a href="{% url 'politics_landing' %}">Politics</a></li>
-            <li><a href="{% url 'sport_landing' %}">Funny Stuff</a></li>
             <li><a href="{% url 'all_products' %}">Shop</a></li>
             {%  if user.is_authenticated %}
                <li><a href="{% url 'new_article' %}">New Article</a></li>
